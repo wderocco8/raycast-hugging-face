@@ -15,7 +15,7 @@
       "name": "chat",
       "title": "chat",
       "description": "Chat with Hugging Face Inference API.",
-      "mode": "no-view"
+      "mode": "view"
     }
   ],
   "preferences": [
