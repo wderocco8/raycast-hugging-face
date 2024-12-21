@@ -1,13 +1,13 @@
 import { Form, getPreferenceValues } from "@raycast/api";
-
-interface Preferences {
-  access_token: string
-}
+import { ChatPreferences } from "./types/preferences";
+import { generateResponse } from "./api/huggingface";
 
 export default function Command() {
   
-  const preferences = getPreferenceValues<Preferences>();
+  const preferences = getPreferenceValues<ChatPreferences>();
   console.log(preferences);
+
+  void generateResponse();
 
   return (
     <Form>
