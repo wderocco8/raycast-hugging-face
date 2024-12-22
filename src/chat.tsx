@@ -1,13 +1,16 @@
 import { Form, getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "./types/preferences";
 import { generateResponse } from "./api/huggingface";
+import { useEffect } from "react";
 
 export default function Command() {
   
   const preferences = getPreferenceValues<ChatPreferences>();
   console.log(preferences);
 
-  void generateResponse();
+  useEffect(() => {
+    void generateResponse();
+  }, [])
 
   return (
     <Form>

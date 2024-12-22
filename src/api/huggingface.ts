@@ -3,6 +3,7 @@
 import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
 import fetch from "node-fetch";
+import { StreamedToken } from "../types/huggingface";
 
 const preferences = getPreferenceValues<ChatPreferences>();
 
@@ -19,7 +20,7 @@ export async function generateResponse() {
         parameters: {
           max_tokens: 512,
           temperature: 0.1,
-          // return_full_text: false,
+          return_full_text: false,
         },
         stream: true,
       }),
@@ -35,44 +36,42 @@ export async function generateResponse() {
     const stream = response.body;
     if (!stream) {
       return false;
-    }    
+    }
 
-    // Use the Node.js stream methods instead
+    // Use the Node.js stream methods instead of HFInference client
     return new Promise((resolve, reject) => {
       let output = "";
       const chunks: Buffer[] = [];
 
-      stream.on('data', (chunk: Buffer) => {
+      stream.on("data", (chunk: Buffer) => {
         chunks.push(chunk);
         const text = chunk.toString();
-        const lines = text.split('\n').filter(line => line.trim() !== '');
-        
+        // console.log("text", text);
+
+        const lines = text.split("\n").filter((line) => line.trim() !== "");
+
         for (const line of lines) {
-          
-          if (line.startsWith('data: ')) {
+          if (line.startsWith("data: ")) {
             try {
-              const data = JSON.parse(line.slice(6));
-              if (data.choices && data.choices.length > 0) {
-                output += data.choices[0].delta.content || '';
-                console.log("parsing output:", data.choices[0].delta.content);
-                
-              }
+              const data: StreamedToken = JSON.parse(line.slice(6));
+
+              output += data.token.text;
+              console.log("parsing output:", data.token.text);
             } catch (e) {
-              console.error('Error parsing JSON:', e);
+              console.error("Error parsing JSON:", e);
             }
           }
         }
       });
 
-      stream.on('end', () => {
+      stream.on("end", () => {
         resolve(output);
       });
 
-      stream.on('error', (err) => {
+      stream.on("error", (err) => {
         reject(err);
       });
     });
-
   } catch (error) {
     console.error("Error generating response:", error);
     throw error;
