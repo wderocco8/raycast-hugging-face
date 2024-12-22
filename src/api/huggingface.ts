@@ -1,12 +1,10 @@
 // docs: https://huggingface.co/docs/huggingface.js/en/inference/README#text-generation-chat-completion-api-compatible
 
-// import { HfInference } from "@huggingface/inference";
 import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
-import fetch from "cross-fetch";
+import fetch from "node-fetch";
 
 const preferences = getPreferenceValues<ChatPreferences>();
-// const hf = new HfInference(preferences.access_token, { fetch });
 
 export async function generateResponse() {
   try {
@@ -17,47 +15,64 @@ export async function generateResponse() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        inputs: [{ role: "user", content: "Can you help me solve an equation?" }],
+        inputs: "Can you help me solve an equation?",
         parameters: {
           max_tokens: 512,
           temperature: 0.1,
+          // return_full_text: false,
         },
         stream: true,
-        fetch: fetch,
       }),
     });
 
-    let output = "";
-
-    const reader = response.body?.getReader();
-    const decoder = new TextDecoder();
-
-    if (!reader) {
-      return false;
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Server responded with error:", errorText);
+      throw new Error(errorText);
     }
 
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
+    // Convert the response to a ReadableStream
+    const stream = response.body;
+    if (!stream) {
+      return false;
+    }    
 
-      const text = decoder.decode(value);
-      const lines = text.split("\n").filter((line) => line.trim() !== "");
+    // Use the Node.js stream methods instead
+    return new Promise((resolve, reject) => {
+      let output = "";
+      const chunks: Buffer[] = [];
 
-      for (const line of lines) {
-        if (line.startsWith("data: ")) {
-          try {
-            const data = JSON.parse(line.slice(6));
-            if (data.choices && data.choices.length > 0) {
-              output += data.choices[0].delta.content || "";
+      stream.on('data', (chunk: Buffer) => {
+        chunks.push(chunk);
+        const text = chunk.toString();
+        const lines = text.split('\n').filter(line => line.trim() !== '');
+        
+        for (const line of lines) {
+          
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              if (data.choices && data.choices.length > 0) {
+                output += data.choices[0].delta.content || '';
+                console.log("parsing output:", data.choices[0].delta.content);
+                
+              }
+            } catch (e) {
+              console.error('Error parsing JSON:', e);
             }
-          } catch (e) {
-            console.error("Error parsing JSON:", e);
           }
         }
-      }
-    }
+      });
 
-    return output;
+      stream.on('end', () => {
+        resolve(output);
+      });
+
+      stream.on('error', (err) => {
+        reject(err);
+      });
+    });
+
   } catch (error) {
     console.error("Error generating response:", error);
     throw error;
