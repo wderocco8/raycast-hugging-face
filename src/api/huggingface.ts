@@ -7,7 +7,7 @@ import { StreamedToken } from "../types/huggingface";
 
 const preferences = getPreferenceValues<ChatPreferences>();
 
-export async function generateResponse() {
+export async function generateResponse(prompt: string, setOutput: React.Dispatch<React.SetStateAction<string>>) {
   try {
     const response = await fetch("https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct", {
       method: "POST",
@@ -16,7 +16,7 @@ export async function generateResponse() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        inputs: "Can you help me solve an equation?",
+        inputs: prompt,
         parameters: {
           max_tokens: 512,
           temperature: 0.1,
@@ -46,8 +46,6 @@ export async function generateResponse() {
       stream.on("data", (chunk: Buffer) => {
         chunks.push(chunk);
         const text = chunk.toString();
-        // console.log("text", text);
-
         const lines = text.split("\n").filter((line) => line.trim() !== "");
 
         for (const line of lines) {
@@ -56,7 +54,8 @@ export async function generateResponse() {
               const data: StreamedToken = JSON.parse(line.slice(6));
 
               output += data.token.text;
-              console.log("parsing output:", data.token.text);
+              setOutput(output);
+              console.log("parsing output:", data.token.text); // TODO: remove log
             } catch (e) {
               console.error("Error parsing JSON:", e);
             }
