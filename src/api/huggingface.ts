@@ -21,16 +21,10 @@ export async function generateResponse(prompt: string, setOutput: React.Dispatch
           model: "meta-llama/Meta-Llama-3-8B-Instruct",
           messages: [{ role: "user", content: prompt }],
           max_tokens: 500,
-          stream: false
+          stream: true,
         }),
-      }
+      },
     );
-
-    const data = await response.json()
-
-    console.log("hit api", data.choices[0].message);
-    return
-
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -56,12 +50,22 @@ export async function generateResponse(prompt: string, setOutput: React.Dispatch
 
         for (const line of lines) {
           if (line.startsWith("data: ")) {
-            try {
-              const data: StreamedToken = JSON.parse(line.slice(6));
+            const rawLine = line.slice(6).trim();
 
-              output += data.token.text;
-              setOutput(output);
-              console.log("parsing output:", data.token.text); // TODO: remove log
+            if (rawLine === "[DONE]") {
+              // Safely handle the end of the stream
+              resolve(output);
+              return;
+            }
+
+            try {
+              const data: StreamedToken = JSON.parse(rawLine);
+              const delta = data.choices[0].delta;
+
+              if ("content" in delta) {
+                output += delta.content;
+                setOutput(output);
+              }
             } catch (e) {
               console.error("Error parsing JSON:", e);
             }
