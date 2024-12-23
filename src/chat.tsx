@@ -1,9 +1,28 @@
-import { Action, ActionPanel, Form } from "@raycast/api";
+import { Action, ActionPanel, Form, showToast, Toast } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useState } from "react";
+import { FormValidation, useForm } from "@raycast/utils";
+
+interface ChatFormValues {
+  prompt: string;
+}
 
 export default function Command() {
   const [output, setOutput] = useState<string>("");
+
+  const { handleSubmit, itemProps } = useForm<ChatFormValues>({
+    onSubmit(values) {
+      handleGenerateResponse(values.prompt);
+      showToast({
+        style: Toast.Style.Success,
+        title: "Yay!",
+        message: "Response created",
+      });
+    },
+    validation: {
+      prompt: FormValidation.Required,
+    },
+  });
 
   const handleGenerateResponse = async (prompt: string) => {
     try {
@@ -17,11 +36,11 @@ export default function Command() {
     <Form
       actions={
         <ActionPanel>
-          <Action.SubmitForm title="Submit Name" onSubmit={(values) => handleGenerateResponse(values.prompt)} />
+          <Action.SubmitForm title="Chat" onSubmit={handleSubmit} />
         </ActionPanel>
       }
     >
-      <Form.TextArea id="prompt" title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." />
+      <Form.TextArea title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." {...itemProps.prompt} />
       <Form.Description title="Streamed Output" text={output} />
     </Form>
   );

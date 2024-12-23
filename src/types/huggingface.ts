@@ -33,35 +33,3 @@ interface Usage {
   prompt_tokens: number;
   total_tokens: number;
 }
-/**
- * {"object":"chat.completion.chunk","id":"","created":1734971499,"model":"meta-llama/Meta-Llama-3-8B-Instruct","system_fingerprint":"2.3.1-dev0-sha-169178b",,"logprobs":null,"finish_reason":null}],"usage":null}
- *
- *
- * "choices":[{"index":0,"delta":{"role":"assistant","content":"Hello"}
- */
-
-/**
- * choices	object[]	
-        delta	unknown	One of the following:
-                 (#1)	object	
-                        content	string	
-                        role	string	
-                 (#2)	object	
-                        role	string	
-                        tool_calls	object	
-                                function	object	
-                                        arguments	string	
-                                        name	string	
-                                id	string	
-                                index	integer	
-                                type	string	
-        finish_reason	string	
-        index	integer	
-        logprobs	object	
-                content	object[]	
-                        logprob	number	
-                        token	string	
-                        top_logprobs	object[]	
-                                logprob	number	
-                                token	string	
- */
