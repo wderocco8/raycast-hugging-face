@@ -1,17 +1,28 @@
-import { Form, getPreferenceValues } from "@raycast/api";
-import { ChatPreferences } from "./types/preferences";
+import { Action, ActionPanel, Form } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
+import { useState } from "react";
 
 export default function Command() {
-  
-  const preferences = getPreferenceValues<ChatPreferences>();
-  console.log(preferences);
+  const [output, setOutput] = useState<string>("");
 
-  void generateResponse();
+  const handleGenerateResponse = async (prompt: string) => {
+    try {
+      await generateResponse(prompt, setOutput);
+    } catch (error) {
+      console.error("Error in handleGenerateResponse:", error);
+    }
+  };
 
   return (
-    <Form>
+    <Form
+      actions={
+        <ActionPanel>
+          <Action.SubmitForm title="Submit Name" onSubmit={(values) => handleGenerateResponse(values.prompt)} />
+        </ActionPanel>
+      }
+    >
       <Form.TextArea id="prompt" title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." />
+      <Form.Description title="Streamed Output" text={output} />
     </Form>
   );
 }
