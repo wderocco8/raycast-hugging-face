@@ -9,15 +9,12 @@ interface ChatFormValues {
 
 export default function Command() {
   const [output, setOutput] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { handleSubmit, itemProps } = useForm<ChatFormValues>({
     onSubmit(values) {
+      if (loading) return; // Prevent duplicate submissions
       handleGenerateResponse(values.prompt);
-      showToast({
-        style: Toast.Style.Success,
-        title: "Yay!",
-        message: "Response created",
-      });
     },
     validation: {
       prompt: FormValidation.Required,
@@ -25,10 +22,27 @@ export default function Command() {
   });
 
   const handleGenerateResponse = async (prompt: string) => {
+    setLoading(true);
+    showToast({
+      style: Toast.Style.Animated,
+      title: "Generating response...",
+    });
+
     try {
       await generateResponse(prompt, setOutput);
+      showToast({
+        style: Toast.Style.Success,
+        title: "Response generated!",
+      });
     } catch (error) {
       console.error("Error in handleGenerateResponse:", error);
+      showToast({
+        style: Toast.Style.Failure,
+        title: "Error",
+        message: "Failed to generate response. Please try again.",
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -39,6 +53,7 @@ export default function Command() {
           <Action.SubmitForm title="Chat" onSubmit={handleSubmit} />
         </ActionPanel>
       }
+      isLoading={loading}
     >
       <Form.TextArea title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." {...itemProps.prompt} />
       <Form.Description title="Streamed Output" text={output} />
