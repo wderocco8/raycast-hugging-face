@@ -9,22 +9,28 @@ const preferences = getPreferenceValues<ChatPreferences>();
 
 export async function generateResponse(prompt: string, setOutput: React.Dispatch<React.SetStateAction<string>>) {
   try {
-    const response = await fetch("https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${preferences.access_token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        inputs: prompt,
-        parameters: {
-          max_tokens: 512,
-          temperature: 0.1,
-          return_full_text: false,
+    const response = await fetch(
+      "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${preferences.access_token}`,
+          "Content-Type": "application/json",
         },
-        stream: true,
-      }),
-    });
+        body: JSON.stringify({
+          model: "meta-llama/Meta-Llama-3-8B-Instruct",
+          messages: [{ role: "user", content: prompt }],
+          max_tokens: 500,
+          stream: false
+        }),
+      }
+    );
+
+    const data = await response.json()
+
+    console.log("hit api", data.choices[0].message);
+    return
+
 
     if (!response.ok) {
       const errorText = await response.text();
