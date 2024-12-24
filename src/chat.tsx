@@ -12,9 +12,7 @@ const questions: { content: string }[] = [
 ];
 
 export default function Chat() {
-  // const [showingDetail, setShowingDetail] = useState(true);
-
-  const [question, setQuestion] = useState<string | null>(null);
+  const [searchQuestion, setSearchQuestion] = useState<string | null>(null);
   const [output, setOutput] = useState<string>("");
 
   const handleAskQuestion = async (question: string | null) => {
@@ -27,7 +25,7 @@ export default function Chat() {
     }
 
     setOutput("");
-    setQuestion(question);
+    setSearchQuestion(question);
 
     showToast({
       style: Toast.Style.Animated,
@@ -54,13 +52,13 @@ export default function Chat() {
     <List
       isShowingDetail={true}
       onSearchTextChange={(text) => {
-        setQuestion(text ? text : null);
+        setSearchQuestion(text ? text : null);
       }}
       searchBarPlaceholder="Search or ask a question..."
       actions={
-        question ? (
+        searchQuestion ? (
           <ActionPanel>
-            <Action title="Ask Question" onAction={() => handleAskQuestion(question)} />
+            <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
           </ActionPanel>
         ) : null
       }
@@ -70,6 +68,13 @@ export default function Chat() {
           key={question.content}
           title={question.content}
           detail={<List.Item.Detail markdown={output || "Select a question to see the response."} />}
+          actions={
+            searchQuestion ? (
+              <ActionPanel>
+                <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
+              </ActionPanel>
+            ) : null
+          }
         />
       ))}
     </List>
