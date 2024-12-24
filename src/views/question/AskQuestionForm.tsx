@@ -2,7 +2,7 @@
  * AskQuestionForm Component
  *
  * This file defines a form-based "rich text" interface for users to interact with the Hugging Face API.
- * It allows users to input a prompt, sends the prompt to the API, and redirects back to the given conversation in chat.tsx.
+ * It allows users to input a question, sends the question to the API, and redirects back to the given conversation in chat.tsx.
  * 
  */
 
@@ -12,7 +12,7 @@ import { useState } from "react";
 import { FormValidation, useForm } from "@raycast/utils";
 
 interface AskQuestionFormValues {
-  prompt: string;
+  question: string;
 }
 
 interface AskQuestionFormProps{
@@ -28,17 +28,17 @@ export default function AskQuestionForm({
   const { handleSubmit, itemProps } = useForm<AskQuestionFormValues>({
     onSubmit(values) {
       if (loading) return; // Prevent duplicate submissions
-      handleGenerateResponse(values.prompt);
+      handleGenerateResponse(values.question);
     },
     initialValues: {
-      prompt: initialQuestion
+      question: initialQuestion
     },
     validation: {
-      prompt: FormValidation.Required,
+      question: FormValidation.Required,
     },
   });
 
-  const handleGenerateResponse = async (prompt: string) => {
+  const handleGenerateResponse = async (question: string) => {
     setLoading(true);
     showToast({
       style: Toast.Style.Animated,
@@ -46,7 +46,7 @@ export default function AskQuestionForm({
     });
 
     try {
-      await generateResponse(prompt, setOutput);
+      await generateResponse(question, setOutput);
       showToast({
         style: Toast.Style.Success,
         title: "Response generated!",
@@ -72,7 +72,7 @@ export default function AskQuestionForm({
       }
       isLoading={loading}
     >
-      <Form.TextArea title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." {...itemProps.prompt} />
+      <Form.TextArea title="question" placeholder="Enter a question to chat with Hugging Face..." {...itemProps.question} />
       <Form.Description title="Output" text={output} />
     </Form>
   );

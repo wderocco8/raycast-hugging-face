@@ -7,7 +7,7 @@ import { StreamedToken } from "../types/huggingface";
 
 const preferences = getPreferenceValues<ChatPreferences>();
 
-export async function generateResponse(prompt: string, setOutput: React.Dispatch<React.SetStateAction<string>>) {
+export async function generateResponse(question: string, setOutput: React.Dispatch<React.SetStateAction<string>>) {
   try {
     const response = await fetch(
       "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct/v1/chat/completions",
@@ -19,7 +19,7 @@ export async function generateResponse(prompt: string, setOutput: React.Dispatch
         },
         body: JSON.stringify({
           model: "meta-llama/Meta-Llama-3-8B-Instruct",
-          messages: [{ role: "user", content: prompt }],
+          messages: [{ role: "user", content: question }],
           max_tokens: 500,
           stream: true,
         }),
