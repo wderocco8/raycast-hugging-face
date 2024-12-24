@@ -7,7 +7,7 @@ interface ChatFormValues {
   prompt: string;
 }
 
-export default function Command() {
+export default function Chat() {
   const [output, setOutput] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -56,7 +56,7 @@ export default function Command() {
       isLoading={loading}
     >
       <Form.TextArea title="Prompt" placeholder="Enter a prompt to chat with Hugging Face..." {...itemProps.prompt} />
-      <Form.Description title="Streamed Output" text={output} />
+      <Form.Description title="Output" text={output} />
     </Form>
   );
 }
