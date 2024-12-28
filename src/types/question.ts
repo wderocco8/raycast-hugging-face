@@ -5,6 +5,7 @@ export interface Question {
   response: string;
   created_at: string;
 }
+
 export interface QuestionsHook {
   data: Question[];
   isLoading: boolean;
