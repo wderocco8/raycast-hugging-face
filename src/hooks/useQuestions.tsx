@@ -36,7 +36,7 @@ export function useQuestions(): QuestionsHook {
       style: Toast.Style.Animated,
     });
     setData((prev) => {
-      const newData = [...prev, question];
+      const newData = [question, ...prev];
       saveToLocalStorage(newData);
       return newData;
     });

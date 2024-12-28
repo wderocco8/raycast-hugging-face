@@ -5,6 +5,7 @@ import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
 import { Question } from "./types/question";
+import { isValidQuestionPrompt } from "./utils/chat";
 
 export default function Chat() {
   const [searchQuestion, setSearchQuestion] = useState<Question>({
@@ -93,7 +94,7 @@ export default function Chat() {
       }}
       searchBarPlaceholder="Search or ask a question..."
       actions={
-        searchQuestion.prompt ? (
+        isValidQuestionPrompt(searchQuestion.prompt) ? (
           <ActionPanel>
             <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
           </ActionPanel>
@@ -107,7 +108,7 @@ export default function Chat() {
           title={question.prompt}
           detail={<List.Item.Detail markdown={output ?? "Select a question to see the response."} />}
           actions={
-            searchQuestion ? (
+            isValidQuestionPrompt(searchQuestion.prompt) ? (
               <ActionPanel>
                 <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
               </ActionPanel>
