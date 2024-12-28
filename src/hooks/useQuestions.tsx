@@ -7,7 +7,6 @@ export function useQuestions(): QuestionsHook {
   const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    console.log("useEffect questions");
     (async () => {
       const stored = await LocalStorage.getItem<string>("questions");
       if (stored) {
@@ -35,14 +34,18 @@ export function useQuestions(): QuestionsHook {
       title: "Saving question...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => {
-      const newData = [question, ...prev];
-      saveToLocalStorage(newData);
-      return newData;
-    });
-    toast.title = "Question saved!";
-    toast.style = Toast.Style.Success;
-  }, []);
+    const newData = [question, ...data]; // Use the current state directly
+    setData(newData); // Update state
+    try {
+      await saveToLocalStorage(newData); // Save to LocalStorage
+      toast.title = "Question saved!";
+      toast.style = Toast.Style.Success;
+    } catch (error) {
+      console.error("Failed to save question:", error);
+      toast.title = "Failed to save question!";
+      toast.style = Toast.Style.Failure;
+    }
+  }, [data]);
 
   const update = useCallback(async (question: Question) => {
     const toast = await showToast({

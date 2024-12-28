@@ -17,25 +17,18 @@ export default function Chat() {
   });
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
-  const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null);
+  // const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null);
 
-  const { data: conversatons, add: addConversation } = useConversations();
+  // const { data: conversatons, add: addConversation } = useConversations();
   const { data: questions, isLoading: isLoadingQuestions, add: addQuestion } = useQuestions();
 
-  // TODO: don't create conversation until a question is asked
-  // useEffect(() => {
-  //   const handleAddConversation = async () => {
-  //     try {
-  //       const newConversation = { id: uuidv4(), title: "Untitled Conversation", created_at: new Date().toISOString() };
-  //       await addConversation(newConversation);
-  //       console.log("Conversation added successfully!");
-  //     } catch (error) {
-  //       console.error("Error adding conversation:", error);
-  //     }
-  //   };
+  console.log("selected", selectedQuestionId);
+  console.log(
+    "questions",
+    questions?.map((q) => [q.id, q.prompt]),
+  );
 
-  //   // handleAddConversation();
-  // }, []);
+  // TODO: don't create conversation until a question is asked
 
   const handleAskQuestion = async (question: Question) => {
     if (!question.prompt) {
@@ -49,7 +42,7 @@ export default function Chat() {
 
     setOutput("");
     setSearchQuestion(question);
-    setSelectedQuestionId(question.id);
+    // setSelectedQuestionId(question.id);
 
     showToast({
       style: Toast.Style.Animated,
@@ -60,10 +53,13 @@ export default function Chat() {
       const response = await generateResponse(question.prompt, setOutput);
       if (response) {
         await addQuestion({ ...question, response });
+        setSelectedQuestionId(question.id);
         showToast({
           style: Toast.Style.Success,
           title: "Response complete!",
         });
+        // Select the new question
+        console.log("new question selected", question.id);
       } else {
         console.error("Stream issue perhaps?");
       }
@@ -89,10 +85,11 @@ export default function Chat() {
   return (
     <List
       isShowingDetail={true}
+      searchText={searchQuestion.prompt}
       onSearchTextChange={(prompt) => {
         setSearchQuestion((prevQuestion) => ({ ...prevQuestion, prompt }));
       }}
-      searchBarPlaceholder="Search or ask a question..."
+      searchBarPlaceholder="Ask a question..."
       actions={
         isValidQuestionPrompt(searchQuestion.prompt) ? (
           <ActionPanel>
@@ -101,10 +98,14 @@ export default function Chat() {
         ) : null
       }
       selectedItemId={selectedQuestionId ?? undefined}
+      onSelectionChange={(id) => {
+        console.log("onSelectionChange", id);
+        setSelectedQuestionId(id);
+      }}
     >
       {questions.map((question) => (
         <List.Item
-          key={question.id}
+          id={question.id}
           title={question.prompt}
           detail={<List.Item.Detail markdown={output ?? "Select a question to see the response."} />}
           actions={
