@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Action, ActionPanel, List, LocalStorage, showToast, Toast } from "@raycast/api";
+import { Action, ActionPanel, List, showToast, Toast } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
@@ -55,11 +55,20 @@ export default function Chat() {
     });
 
     try {
-      await generateResponse(question.prompt, setOutput);
-      showToast({
-        style: Toast.Style.Success,
-        title: "Response complete!",
-      });
+      const response = await generateResponse(question.prompt, setOutput);
+      if (response) {
+        await addQuestion({...question, response})
+        showToast({
+          style: Toast.Style.Success,
+          title: "Response complete!",
+        });
+      } else {
+        console.error("Stream issue perhaps?")
+      }
+      
+      // Create a new fresh question (with same conversation id)
+      setSelectedQuestionId
+      
     } catch (error) {
       console.error("Error generating response:", error);
       showToast({

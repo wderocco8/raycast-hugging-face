@@ -7,9 +7,11 @@ export function useQuestions(): QuestionsHook {
   const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    console.log("useEffect questions");
     (async () => {
       const stored = await LocalStorage.getItem<string>("questions");
       if (stored) {
+        
         setData(JSON.parse(stored));
       }
       setLoading(false);
