@@ -16,23 +16,28 @@ export function useQuestions(): QuestionsHook {
     })();
   }, []);
 
-  useEffect(() => {
+  const saveToLocalStorage = async (questions: Question[]) => {
     try {
-      LocalStorage.setItem("questions", JSON.stringify(data));
+      await LocalStorage.setItem("questions", JSON.stringify(questions));
     } catch (error) {
       showToast({
-        title: "Failed to save questions to LocalStorage",
+        title: "Failed to save question",
         style: Toast.Style.Failure,
       });
+      throw error;
     }
-  }, [data]);
+  };
 
   const add = useCallback(async (question: Question) => {
     const toast = await showToast({
       title: "Saving question...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => [...prev, question]);
+    setData((prev) => {
+      const newData = [...prev, question];
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Question saved!";
     toast.style = Toast.Style.Success;
   }, []);
@@ -42,7 +47,11 @@ export function useQuestions(): QuestionsHook {
       title: "Updating question...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => prev.map((q) => (q.id === question.id ? question : q)));
+    setData((prev) => {
+      const newData = prev.map((q) => (q.id === question.id ? question : q));
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Question updated!";
     toast.style = Toast.Style.Success;
   }, []);
@@ -52,7 +61,11 @@ export function useQuestions(): QuestionsHook {
       title: "Removing question...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => prev.filter((q) => q.id !== question.id));
+    setData((prev) => {
+      const newData = prev.filter((q) => q.id !== question.id);
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Question removed!";
     toast.style = Toast.Style.Success;
   }, []);

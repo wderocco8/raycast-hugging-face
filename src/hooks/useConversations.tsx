@@ -21,7 +21,7 @@ export function useConversations(): ConversationsHook {
       await LocalStorage.setItem("conversations", JSON.stringify(conversations));
     } catch (error) {
       showToast({
-        title: "Failed to save conversation to LocalStorage",
+        title: "Failed to save conversation",
         style: Toast.Style.Failure,
       });
       throw error;
