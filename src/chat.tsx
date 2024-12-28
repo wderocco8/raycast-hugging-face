@@ -1,19 +1,15 @@
 import { useState } from "react";
 import { Action, ActionPanel, List, showToast, Toast } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
-
-const questions: { content: string }[] = [
-  {
-    content: "How do I code this",
-  },
-  {
-    content: "How do I code that",
-  },
-];
+import { useConversations } from "./hooks/useConversations";
+import { useQuestions } from "./hooks/useQuestions";
 
 export default function Chat() {
   const [searchQuestion, setSearchQuestion] = useState<string | null>(null);
   const [output, setOutput] = useState<string>("");
+
+  const { add: addConversation } = useConversations();
+  const { data: questions, isLoading: isLoadingQuestions, add: addQuestion } = useQuestions();
 
   const handleAskQuestion = async (question: string | null) => {
     if (!question) {
@@ -65,8 +61,8 @@ export default function Chat() {
     >
       {questions.map((question) => (
         <List.Item
-          key={question.content}
-          title={question.content}
+          key={question.id}
+          title={question.prompt}
           detail={<List.Item.Detail markdown={output || "Select a question to see the response."} />}
           actions={
             searchQuestion ? (

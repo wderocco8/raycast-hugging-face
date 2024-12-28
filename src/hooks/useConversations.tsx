@@ -16,23 +16,28 @@ export function useConversations(): ConversationsHook {
     })();
   }, []);
 
-  useEffect(() => {
+  const saveToLocalStorage = async (conversations: Conversation[]) => {
     try {
-      LocalStorage.setItem("conversations", JSON.stringify(data));
+      await LocalStorage.setItem("conversations", JSON.stringify(conversations));
     } catch (error) {
       showToast({
         title: "Failed to save conversation to LocalStorage",
         style: Toast.Style.Failure,
       });
+      throw error;
     }
-  }, [data]);
+  };
 
   const add = useCallback(async (conversation: Conversation) => {
     const toast = await showToast({
       title: "Creating conversation...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => [...prev, conversation]);
+    setData((prev) => {
+      const newData = [...prev, conversation];
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Conversation created!";
     toast.style = Toast.Style.Success;
   }, []);
@@ -42,7 +47,11 @@ export function useConversations(): ConversationsHook {
       title: "Updating Conversation...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => prev.map((q) => (q.id === conversation.id ? conversation : q)));
+    setData((prev) => {
+      const newData = prev.map((q) => (q.id === conversation.id ? conversation : q));
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Conversation updated!";
     toast.style = Toast.Style.Success;
   }, []);
@@ -52,7 +61,11 @@ export function useConversations(): ConversationsHook {
       title: "Removing conversation...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => prev.filter((q) => q.id !== conversation.id));
+    setData((prev) => {
+      const newData = prev.filter((q) => q.id !== conversation.id);
+      saveToLocalStorage(newData);
+      return newData;
+    });
     toast.title = "Conversation removed!";
     toast.style = Toast.Style.Success;
   }, []);
