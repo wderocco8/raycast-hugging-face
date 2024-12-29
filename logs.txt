@@ -1,0 +1,3148 @@
+
+> dev
+> ray develop
+
+[36minfo[39m  - entry points ["src/chat.tsx"]
+[36minfo[39m  - compiled entry points
+[36minfo[39m  - generated extension's TypeScript definitions
+[32mready[39m  - built extension successfully
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions []
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions [ [length]: 0 ]
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions []
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions [ [length]: 0 ]
+[2m17:50:04[22m onSelectionChange called with: { id: null, selectedQuestionId: null, isAddingQuestion: false }
+[2m17:50:04[22m Selection change prevented due to: { hasId: false, isDifferent: false, isAdding: false }
+[2m17:50:04[22m onSelectionChange called with: { id: null, selectedQuestionId: null, isAddingQuestion: false }
+[2m17:50:04[22m Selection change prevented due to: { hasId: false, isDifferent: false, isAdding: false }
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions []
+[2m17:50:04[22m selected null
+[2m17:50:04[22m questions [ [length]: 0 ]
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions []
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions [ [length]: 0 ]
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions []
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions [ [length]: 0 ]
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:05[22m selected null
+[2m17:50:05[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:05[22m new question selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:05[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:05[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:05[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:05[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:05[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:05[22m Selection change prevented due to: { hasId: true, isDifferent: false, isAdding: false }
+[2m17:50:05[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:05[22m Selection change prevented due to: { hasId: true, isDifferent: false, isAdding: false }
+[2m17:50:25[22m selected null
+[2m17:50:25[22m questions []
+[2m17:50:25[22m selected null
+[2m17:50:25[22m questions [ [length]: 0 ]
+[2m17:50:25[22m selected null
+[2m17:50:25[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:25[22m selected null
+[2m17:50:25[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:25[22m onSelectionChange called with: { id: null, selectedQuestionId: null, isAddingQuestion: false }
+[2m17:50:25[22m Selection change prevented due to: { hasId: false, isDifferent: false, isAdding: false }
+[2m17:50:25[22m onSelectionChange called with: { id: null, selectedQuestionId: null, isAddingQuestion: false }
+[2m17:50:25[22m Selection change prevented due to: { hasId: false, isDifferent: false, isAdding: false }
+[2m17:50:25[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: null,
+  isAddingQuestion: false
+}
+[2m17:50:25[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:25[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: null,
+  isAddingQuestion: false
+}
+[2m17:50:25[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:25[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:25[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:25[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:25[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:26[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:26[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:26[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:26[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [ [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ] ]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 1
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m new question selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  selectedQuestionId: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b' ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a' ]
+]
+[2m17:50:27[22m selected 3883f37e-4ef4-488d-b7a4-14252d12e646
+[2m17:50:27[22m questions [
+  [ '3883f37e-4ef4-488d-b7a4-14252d12e646', 'b', [length]: 2 ],
+  [ 'fca9c174-6b1f-414f-b2aa-6d810720f95a', 'a', [length]: 2 ],
+  [length]: 2
+]
+[2m17:50:27[22m onSelectionChange called with: {
+  id: 'fca9c174-6b1f-414f-b2aa-6d810720f95a',
+  selectedQuestionId: '3883f37e-4ef4-488d-b7a4-14252d12e646',
+  isAddingQuestion: false
+}
+[2m17:50:27[22m Selection will be updated to: fca9c174-6b1f-414f-b2aa-6d810720f95a
+[2m17:50:27[22m selected fca9c174-6b1f-414f-b2aa-6d810720f95a
+[35mevent[39m  - changed file src/chat.tsx
+[36minfo[39m  - entry points ["src/chat.tsx"]
+[36minfo[39m  - compiled entry points
+[36minfo[39m  - generated extension's TypeScript definitions
+[32mready[39m  - built extension successfully
+[2K[35mevent[39m  - stopped development mode

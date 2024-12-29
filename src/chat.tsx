@@ -53,13 +53,14 @@ export default function Chat() {
       const response = await generateResponse(question.prompt, setOutput);
       if (response) {
         await addQuestion({ ...question, response });
+
+        console.log("new question selected", question.id);
         setSelectedQuestionId(question.id);
+
         showToast({
           style: Toast.Style.Success,
           title: "Response complete!",
         });
-        // Select the new question
-        console.log("new question selected", question.id);
       } else {
         console.error("Stream issue perhaps?");
       }
@@ -90,6 +91,15 @@ export default function Chat() {
         setSearchQuestion((prevQuestion) => ({ ...prevQuestion, prompt }));
       }}
       searchBarPlaceholder="Ask a question..."
+      isLoading={isLoadingQuestions}
+      selectedItemId={selectedQuestionId ?? undefined}
+      onSelectionChange={(id) => {
+        console.log("onSelectionChange called with:", {
+          id,
+          selectedQuestionId,
+        });
+        setSelectedQuestionId(id);
+      }}
       actions={
         isValidQuestionPrompt(searchQuestion.prompt) ? (
           <ActionPanel>
@@ -97,15 +107,11 @@ export default function Chat() {
           </ActionPanel>
         ) : null
       }
-      selectedItemId={selectedQuestionId ?? undefined}
-      onSelectionChange={(id) => {
-        console.log("onSelectionChange", id);
-        setSelectedQuestionId(id);
-      }}
     >
       {questions.map((question) => (
         <List.Item
           id={question.id}
+          key={question.id}
           title={question.prompt}
           detail={<List.Item.Detail markdown={output ?? "Select a question to see the response."} />}
           actions={
