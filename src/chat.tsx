@@ -21,13 +21,8 @@ export default function Chat() {
   // const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null);
 
   // const { data: conversatons, add: addConversation } = useConversations();
-  const { data: questions, isLoading: isLoadingQuestions, add: addQuestion, update: updateQuestion } = useQuestions();
-
-  console.log("selected", selectedQuestionId);
-  console.log(
-    "questions",
-    questions?.map((q) => [q.id, q.prompt]),
-  );
+  const { getByConversation, isLoading: isLoadingQuestions, add: addQuestion, update: updateQuestion } = useQuestions();
+  const questions = getByConversation(searchQuestion.conversationId);
 
   // TODO: don't create conversation until a question is asked
 
@@ -41,9 +36,8 @@ export default function Chat() {
       return;
     }
 
-    // Clear output and update current question
+    // Clear output (and TODO: clear search Question)
     setOutput("");
-    setSearchQuestion(question); // TODO: somehow this is very necessary, why???
 
     await addQuestion(question);
     setSelectedQuestionId(question.id);
@@ -98,7 +92,7 @@ export default function Chat() {
       actions={
         isValidQuestionPrompt(searchQuestion.prompt) ? (
           <ActionPanel>
-            <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
+            <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
           </ActionPanel>
         ) : null
       }
@@ -117,7 +111,7 @@ export default function Chat() {
           actions={
             isValidQuestionPrompt(searchQuestion.prompt) ? (
               <ActionPanel>
-                <Action title="Ask Question" onAction={() => handleAskQuestion(searchQuestion)} />
+                <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
               </ActionPanel>
             ) : null
           }
