@@ -39,7 +39,11 @@ export default function Chat() {
     // Clear output (and TODO: clear search Question)
     setOutput("");
 
+    // Take snapshot of questions (for generateResponse) and add new question
+    const allQuestions = [...questions, question];
     await addQuestion(question);
+
+    // Select the asked question
     setSelectedQuestionId(question.id);
     showToast({
       style: Toast.Style.Animated,
@@ -47,7 +51,7 @@ export default function Chat() {
     });
 
     try {
-      const response = await generateResponse(question.prompt, setOutput);
+      const response = await generateResponse(allQuestions, question.id, setOutput);
       if (response) {
         // Update with finalized response
         await updateQuestion({ ...question, response, isStreaming: false });
