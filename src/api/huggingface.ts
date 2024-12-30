@@ -4,30 +4,34 @@ import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
 import fetch from "node-fetch";
 import { StreamedToken } from "../types/huggingface";
+import { Question } from "../types/question";
 
 const preferences = getPreferenceValues<ChatPreferences>();
+const model = "meta-llama/Meta-Llama-3-8B-Instruct/v1";
 
 export async function generateResponse(
-  question: string,
+  questions: Question[],
+  questionId: string,
   setOutput: React.Dispatch<React.SetStateAction<string>>,
 ): Promise<string | false> {
   try {
-    const response = await fetch(
-      "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${preferences.access_token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "meta-llama/Meta-Llama-3-8B-Instruct",
-          messages: [{ role: "user", content: question }],
-          max_tokens: 500,
-          stream: true,
-        }),
+    const lastIndex = questions.map((q) => q.id).indexOf(questionId);
+    const filteredQuestions = questions.slice(0, lastIndex + 1);
+
+    const response = await fetch(`https://api-inference.huggingface.co/models/${model}/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${preferences.access_token}`,
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({
+        model: "meta-llama/Meta-Llama-3-8B-Instruct",
+        // messages: [{ role: "user", content: question }],
+        messages: filteredQuestions.map((q) => ({ role: "user", content: q.prompt })),
+        max_tokens: 500,
+        stream: true,
+      }),
+    });
 
     if (!response.ok) {
       const errorText = await response.text();
