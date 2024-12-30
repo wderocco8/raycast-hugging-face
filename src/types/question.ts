@@ -1,9 +1,10 @@
 export interface Question {
   id: string;
-  conversation_id: string;
+  conversationId: string;
   prompt: string;
   response: string;
-  created_at: string;
+  createdAt: string;
+  isStreaming: boolean;
 }
 
 export interface QuestionsHook {

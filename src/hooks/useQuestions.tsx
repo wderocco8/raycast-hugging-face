@@ -77,7 +77,7 @@ export function useQuestions(): QuestionsHook {
 
   const getByConversation = useCallback(
     (conversationId: string) => {
-      return data.filter((q) => q.conversation_id === conversationId);
+      return data.filter((q) => q.conversationId === conversationId);
     },
     [data],
   );
