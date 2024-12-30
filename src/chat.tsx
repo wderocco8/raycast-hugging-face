@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Action, ActionPanel, List, showToast, Toast } from "@raycast/api";
+import { Action, ActionPanel, Icon, List, showToast, Toast } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 // import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
@@ -56,7 +56,7 @@ export default function Chat() {
       const response = await generateResponse(question.prompt, setOutput);
       if (response) {
         // Update with finalized response
-        await updateQuestion({ ...question, response });
+        await updateQuestion({ ...question, response, isStreaming: false });
         showToast({
           style: Toast.Style.Success,
           title: "Response complete!",
@@ -107,7 +107,8 @@ export default function Chat() {
         <List.Item
           id={question.id}
           key={question.id}
-          title={question.prompt}
+          title={{ value: question.prompt, tooltip: question.prompt }}
+          accessories={question.isStreaming ? [{ icon: Icon.Dot }] : undefined}
           detail={
             <List.Item.Detail
               markdown={question.id === selectedQuestionId ? question.response || output : question.response}
