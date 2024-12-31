@@ -50,6 +50,16 @@ export default function Chat() {
       title: "Asking question...",
     });
 
+    // Create a new FRESH question (with same conversation id)
+    setSearchQuestion((prevQuestion) => ({
+      id: uuidv4(),
+      conversationId: prevQuestion.conversationId,
+      prompt: "",
+      response: "",
+      createdAt: new Date().toISOString(),
+      isStreaming: true,
+    }));
+
     try {
       const response = await generateResponse(allQuestions, question.id, setOutput);
       if (response) {
@@ -63,15 +73,6 @@ export default function Chat() {
         console.error("Stream issue perhaps?");
       }
 
-      // Create a new FRESH question (with same conversation id)
-      setSearchQuestion((prevQuestion) => ({
-        id: uuidv4(),
-        conversationId: prevQuestion.conversationId,
-        prompt: "",
-        response: "",
-        createdAt: new Date().toISOString(),
-        isStreaming: true,
-      }));
     } catch (error) {
       console.error("Error generating response:", error);
       showToast({
