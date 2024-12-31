@@ -7,7 +7,6 @@ export function useConversations(): ConversationsHook {
   const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    console.log("useEffect conversations");
     (async () => {
       const stored = await LocalStorage.getItem<string>("conversations");
       if (stored) {

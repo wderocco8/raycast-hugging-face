@@ -13,8 +13,14 @@
   "commands": [
     {
       "name": "chat",
-      "title": "chat",
+      "title": "Chat",
       "description": "Chat with Hugging Face Inference API.",
+      "mode": "view"
+    },
+    {
+      "name": "conversations",
+      "title": "View Conversations",
+      "description": "View your previous conversations.",
       "mode": "view"
     }
   ],

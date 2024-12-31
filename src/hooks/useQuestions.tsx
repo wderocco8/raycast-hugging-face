@@ -35,7 +35,7 @@ export function useQuestions(): QuestionsHook {
       style: Toast.Style.Animated,
     });
     const newData = [question, ...data]; // Use the current state directly
-    setData(newData); // Update state
+    setData(newData); // Update state optimistically
     try {
       await saveToLocalStorage(newData); // Save to LocalStorage
       toast.title = "Question saved!";
