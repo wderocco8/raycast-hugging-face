@@ -5,7 +5,7 @@ import { generateResponse } from "./api/huggingface";
 import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
 import { Question } from "./types/question";
-import { isValidQuestionPrompt } from "./utils/chat";
+import { isValidQuestion } from "./utils/chat";
 
 export default function Chat() {
   const [searchQuestion, setSearchQuestion] = useState<Question>({
@@ -18,6 +18,8 @@ export default function Chat() {
   });
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
+  const [isAskingQuestion, setIsAskingQuestion] = useState<boolean>(false);
+  const isValid = isValidQuestion(searchQuestion.prompt, isAskingQuestion);
   // const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null);
 
   // const { data: conversatons, add: addConversation } = useConversations();
@@ -36,8 +38,9 @@ export default function Chat() {
       return;
     }
 
-    // Clear output (and TODO: clear search Question)
+    // Clear output and set asking
     setOutput("");
+    setIsAskingQuestion(true);
 
     // Take snapshot of questions (for generateResponse) and add new question
     const allQuestions = [...questions, question];
@@ -50,15 +53,18 @@ export default function Chat() {
       title: "Asking question...",
     });
 
-    // Create a new FRESH question (with same conversation id)
-    setSearchQuestion((prevQuestion) => ({
-      id: uuidv4(),
-      conversationId: prevQuestion.conversationId,
-      prompt: "",
-      response: "",
-      createdAt: new Date().toISOString(),
-      isStreaming: true,
-    }));
+    // Create a new FRESH question (with same conversation id) -> TODO: figure out why this needs to be AFTER selecting the question...
+    setSearchQuestion((prevQuestion) => {
+      const newQuestion = {
+        id: uuidv4(),
+        conversationId: prevQuestion.conversationId,
+        prompt: "",
+        response: "",
+        createdAt: new Date().toISOString(),
+        isStreaming: true,
+      };
+      return newQuestion;
+    });
 
     try {
       const response = await generateResponse(allQuestions, question.id, setOutput);
@@ -72,7 +78,6 @@ export default function Chat() {
       } else {
         console.error("Stream issue perhaps?");
       }
-
     } catch (error) {
       console.error("Error generating response:", error);
       showToast({
@@ -80,8 +85,12 @@ export default function Chat() {
         title: "Error",
         message: "Failed to generate response. Please try again.",
       });
+    } finally {
+      setIsAskingQuestion(false);
     }
   };
+
+  console.log(selectedQuestionId);
 
   return (
     <List
@@ -93,9 +102,11 @@ export default function Chat() {
       searchBarPlaceholder="Ask a question..."
       isLoading={isLoadingQuestions}
       selectedItemId={selectedQuestionId ?? undefined}
-      onSelectionChange={setSelectedQuestionId}
+      onSelectionChange={(id) => {
+        setSelectedQuestionId(id);
+      }}
       actions={
-        isValidQuestionPrompt(searchQuestion.prompt) ? (
+        isValid ? (
           <ActionPanel>
             <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
           </ActionPanel>
@@ -114,7 +125,7 @@ export default function Chat() {
             />
           }
           actions={
-            isValidQuestionPrompt(searchQuestion.prompt) ? (
+            isValid ? (
               <ActionPanel>
                 <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
               </ActionPanel>
