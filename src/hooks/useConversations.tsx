@@ -10,7 +10,10 @@ export function useConversations(): ConversationsHook {
     (async () => {
       const stored = await LocalStorage.getItem<string>("conversations");
       if (stored) {
-        setData(JSON.parse(stored));
+        const items: Conversation[] = JSON.parse(stored);
+        const sortedItems = items.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+        setData(sortedItems);
       }
       setLoading(false);
     })();
