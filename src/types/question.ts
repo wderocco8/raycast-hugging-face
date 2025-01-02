@@ -14,5 +14,5 @@ export interface QuestionsHook {
   update: (question: Question) => Promise<void>;
   remove: (question: Question) => Promise<void>;
   removeByConversationId: (conversationId: string) => Promise<void>;
-  getByConversation: (conversationId: string) => Question[];
+  getByConversationId: (conversationId: string) => Question[];
 }

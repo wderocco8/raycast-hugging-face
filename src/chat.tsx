@@ -23,8 +23,8 @@ export default function Chat({ conversationId }: ChatProps) {
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
   const { add: addConversation } = useConversations();
-  const { getByConversation, isLoading: isLoadingQuestions, add: addQuestion, update: updateQuestion } = useQuestions();
-  const questions = getByConversation(searchQuestion.conversationId);
+  const { getByConversationId, isLoading: isLoadingQuestions, add: addQuestion, update: updateQuestion } = useQuestions();
+  const questions = getByConversationId(searchQuestion.conversationId);
 
   const handleAskQuestion = async (question: Question) => {
     if (!question.prompt) {

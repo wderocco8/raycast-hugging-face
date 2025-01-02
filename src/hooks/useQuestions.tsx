@@ -99,7 +99,7 @@ export function useQuestions(): QuestionsHook {
     }
   }, []);
 
-  const getByConversation = useCallback(
+  const getByConversationId = useCallback(
     (conversationId: string) => {
       return data.filter((q) => q.conversationId === conversationId);
     },
@@ -107,7 +107,7 @@ export function useQuestions(): QuestionsHook {
   );
 
   return useMemo(
-    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversation }),
-    [data, isLoading, add, update, remove, removeByConversationId, getByConversation],
+    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversationId }),
+    [data, isLoading, add, update, remove, removeByConversationId, getByConversationId],
   );
 }

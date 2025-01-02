@@ -6,7 +6,7 @@ import Chat from "./chat";
 
 export default function Conversations() {
   const { data: conversations, isLoading: isLoadingConversations, remove: removeConversation } = useConversations();
-  const { getByConversation } = useQuestions();
+  const { getByConversationId } = useQuestions();
   const { push } = useNavigation();
 
   return (
@@ -26,7 +26,7 @@ export default function Conversations() {
                   <List.Item.Detail.Metadata.Label title="Date Created" text={formatFullTime(conversation.createdAt)} />
                   <List.Item.Detail.Metadata.Separator />
                   <List.Item.Detail.Metadata.Label title="Recent Questions" />
-                  {getByConversation(conversation.id)
+                  {getByConversationId(conversation.id)
                     .slice(-5)
                     .map((q) => (
                       <List.Item.Detail.Metadata.Label title={`Q: ${q.prompt}`} key={q.id} />
