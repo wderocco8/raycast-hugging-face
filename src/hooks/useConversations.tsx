@@ -1,10 +1,12 @@
 import { LocalStorage, showToast, Toast } from "@raycast/api";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { Conversation, ConversationsHook } from "../types/conversation";
+import { useQuestions } from "./useQuestions";
 
 export function useConversations(): ConversationsHook {
   const [data, setData] = useState<Conversation[]>([]);
   const [isLoading, setLoading] = useState<boolean>(true);
+  const { removeByConversationId } = useQuestions();
 
   useEffect(() => {
     (async () => {
@@ -64,13 +66,24 @@ export function useConversations(): ConversationsHook {
       title: "Removing conversation...",
       style: Toast.Style.Animated,
     });
-    setData((prev) => {
-      const newData = prev.filter((q) => q.id !== conversation.id);
-      saveToLocalStorage(newData);
-      return newData;
-    });
-    toast.title = "Conversation removed!";
-    toast.style = Toast.Style.Success;
+
+    try {
+      // Remove all questions in conversation
+      await removeByConversationId(conversation.id);
+
+      // Remove conversation
+      setData((prev) => {
+        const newData = prev.filter((q) => q.id !== conversation.id);
+        saveToLocalStorage(newData);
+        return newData;
+      });
+      toast.title = "Conversation removed!";
+      toast.style = Toast.Style.Success;
+    } catch (error) {
+      console.error("Error removing conversation:", error);
+      toast.title = "Failed to remove conversation";
+      toast.style = Toast.Style.Failure;
+    }
   }, []);
 
   return useMemo(() => ({ data, isLoading, add, update, remove }), [data, isLoading, add, update, remove]);

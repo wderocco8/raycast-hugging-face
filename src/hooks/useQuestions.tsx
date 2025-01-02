@@ -10,7 +10,6 @@ export function useQuestions(): QuestionsHook {
     (async () => {
       const stored = await LocalStorage.getItem<string>("questions");
       if (stored) {
-        
         setData(JSON.parse(stored));
       }
       setLoading(false);
@@ -29,23 +28,26 @@ export function useQuestions(): QuestionsHook {
     }
   };
 
-  const add = useCallback(async (question: Question) => {
-    const toast = await showToast({
-      title: "Saving question...",
-      style: Toast.Style.Animated,
-    });
-    const newData = [question, ...data]; // Use the current state directly
-    setData(newData); // Update state optimistically
-    try {
-      await saveToLocalStorage(newData); // Save to LocalStorage
-      toast.title = "Question saved!";
-      toast.style = Toast.Style.Success;
-    } catch (error) {
-      console.error("Failed to save question:", error);
-      toast.title = "Failed to save question!";
-      toast.style = Toast.Style.Failure;
-    }
-  }, [data]);
+  const add = useCallback(
+    async (question: Question) => {
+      const toast = await showToast({
+        title: "Saving question...",
+        style: Toast.Style.Animated,
+      });
+      const newData = [question, ...data]; // Use the current state directly
+      setData(newData); // Update state optimistically
+      try {
+        await saveToLocalStorage(newData); // Save to LocalStorage
+        toast.title = "Question saved!";
+        toast.style = Toast.Style.Success;
+      } catch (error) {
+        console.error("Failed to save question:", error);
+        toast.title = "Failed to save question!";
+        toast.style = Toast.Style.Failure;
+      }
+    },
+    [data],
+  );
 
   const update = useCallback(async (question: Question) => {
     const toast = await showToast({
@@ -75,6 +77,28 @@ export function useQuestions(): QuestionsHook {
     toast.style = Toast.Style.Success;
   }, []);
 
+  const removeByConversationId = useCallback(async (conversationId: string) => {
+    const toast = await showToast({
+      title: "Removing conversation questions...",
+      style: Toast.Style.Animated,
+    });
+
+    try {
+      setData((prev) => {
+        const newData = prev.filter((q) => q.conversationId !== conversationId);
+        saveToLocalStorage(newData);
+        return newData;
+      });
+
+      toast.title = "Conversation questions removed!";
+      toast.style = Toast.Style.Success;
+    } catch (error) {
+      console.error("Failed to remove conversation questions:", error);
+      toast.title = "Failed to remove conversation questions";
+      toast.style = Toast.Style.Failure;
+    }
+  }, []);
+
   const getByConversation = useCallback(
     (conversationId: string) => {
       return data.filter((q) => q.conversationId === conversationId);
@@ -83,7 +107,7 @@ export function useQuestions(): QuestionsHook {
   );
 
   return useMemo(
-    () => ({ data, isLoading, add, update, remove, getByConversation }),
-    [data, isLoading, add, update, remove, getByConversation],
+    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversation }),
+    [data, isLoading, add, update, remove, removeByConversationId, getByConversation],
   );
 }

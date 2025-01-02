@@ -1,11 +1,11 @@
-import { Action, ActionPanel, List, useNavigation } from "@raycast/api";
+import { Action, ActionPanel, Keyboard, List, useNavigation } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import { useQuestions } from "./hooks/useQuestions";
 import Chat from "./chat";
 
 export default function Conversations() {
-  const { data: conversations, isLoading: isLoadingConversations } = useConversations();
+  const { data: conversations, isLoading: isLoadingConversations, remove: removeConversation } = useConversations();
   const { getByConversation } = useQuestions();
   const { push } = useNavigation();
 
@@ -37,7 +37,13 @@ export default function Conversations() {
           }
           actions={
             <ActionPanel>
-              <Action title="Push" onAction={() => push(<Chat conversationId={conversation.id} />)} />
+              <Action title="Open Conversation" onAction={() => push(<Chat conversationId={conversation.id} />)} />
+              <Action
+                title="Delete Conversation"
+                style={Action.Style.Destructive}
+                shortcut={Keyboard.Shortcut.Common.Remove}
+                onAction={() => removeConversation(conversation)}
+              />
             </ActionPanel>
           }
         />
