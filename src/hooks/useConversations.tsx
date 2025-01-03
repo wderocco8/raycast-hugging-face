@@ -50,6 +50,7 @@ export function useConversations(): ConversationsHook {
 
   const add = useCallback(
     async (conversation: Conversation) => {
+      setLoading(true);
       const toast = await showToast({
         title: "Creating conversation...",
         style: Toast.Style.Animated,
@@ -60,12 +61,14 @@ export function useConversations(): ConversationsHook {
 
       toast.title = "Conversation created!";
       toast.style = Toast.Style.Success;
+      setLoading(false);
     },
     [data],
   );
 
   const update = useCallback(
     async (id: string, title: string) => {
+      setLoading(true);
       const toast = await showToast({
         title: "Updating Conversation...",
         style: Toast.Style.Animated,
@@ -77,12 +80,14 @@ export function useConversations(): ConversationsHook {
 
       toast.title = "Conversation updated!";
       toast.style = Toast.Style.Success;
+      setLoading(false);
     },
     [data],
   );
 
   const remove = useCallback(
     async (conversation: Conversation) => {
+      setLoading(true);
       const toast = await showToast({
         title: "Removing conversation...",
         style: Toast.Style.Animated,
@@ -103,10 +108,39 @@ export function useConversations(): ConversationsHook {
         console.error("Error removing conversation:", error);
         toast.title = "Failed to remove conversation";
         toast.style = Toast.Style.Failure;
+      } finally {
+        setLoading(false);
       }
     },
     [data],
   );
 
-  return useMemo(() => ({ data, isLoading, add, update, remove }), [data, isLoading, add, update, remove]);
+  const refresh = useCallback(async () => {
+    setLoading(true);
+    try {
+      const stored = await LocalStorage.getItem<string>("conversations");
+      if (stored) {
+        // Default conversations stored without questions
+        const items: Conversation[] = JSON.parse(stored);
+        const sortedItems = items.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+        // Enrich conversations with questions
+        const enrichedItems = sortedItems.map((conversation) => ({
+          ...conversation,
+          questions: getQuestionsByConversationId(conversation.id),
+        }));
+
+        setData(enrichedItems);
+      }
+    } catch (error) {
+      console.error("Error refreshing conversation:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, [getQuestionsByConversationId]);
+
+  return useMemo(
+    () => ({ data, isLoading, add, update, remove, refresh }),
+    [data, isLoading, add, update, remove, refresh],
+  );
 }

@@ -13,4 +13,5 @@ export interface ConversationsHook {
   add: (conversation: Conversation) => Promise<void>;
   update: (id: string, title: string) => Promise<void>;
   remove: (conversation: Conversation) => Promise<void>;
+  refresh: () => Promise<void>;
 }

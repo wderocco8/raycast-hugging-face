@@ -4,10 +4,17 @@ import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import Chat from "./chat";
 import { Conversation } from "./types/conversation";
 import ConversationForm from "./views/conversations/ConversationForm";
+import { useState } from "react";
 
 export default function Conversations() {
-  const { data: conversations, isLoading: isLoadingConversations, remove: removeConversation } = useConversations();
+  const {
+    data: conversations,
+    isLoading: isLoadingConversations,
+    remove: removeConversation,
+    refresh,
+  } = useConversations();
   const { push } = useNavigation();
+  const [updateKey, setUpdateKey] = useState(0);
 
   // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
   const markdown = (conversation: Conversation) =>
@@ -16,7 +23,7 @@ export default function Conversations() {
   `.trim();
 
   return (
-    <List isShowingDetail isLoading={isLoadingConversations}>
+    <List isShowingDetail isLoading={isLoadingConversations} key={updateKey}>
       {conversations.map((conversation) => (
         <List.Item
           key={conversation.id}
@@ -50,7 +57,12 @@ export default function Conversations() {
               <Action
                 title="Update Conversation"
                 shortcut={Keyboard.Shortcut.Common.Edit}
-                onAction={() => push(<ConversationForm conversationId={conversation.id} />)}
+                onAction={() =>
+                  push(<ConversationForm conversationId={conversation.id} />, async () => {
+                    await refresh() // Refresh conversations
+                    setUpdateKey((prev) => prev + 1) // Suposedly this force re-renders the List (can't tell tbh)
+                  })
+                }
               />
               <Action
                 title="Delete Conversation"
