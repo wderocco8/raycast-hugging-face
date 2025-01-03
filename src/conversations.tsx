@@ -3,6 +3,7 @@ import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import Chat from "./chat";
 import { Conversation } from "./types/conversation";
+import ConversationForm from "./views/conversations/ConversationForm";
 
 export default function Conversations() {
   const { data: conversations, isLoading: isLoadingConversations, remove: removeConversation } = useConversations();
@@ -30,6 +31,10 @@ export default function Conversations() {
                 <List.Item.Detail.Metadata>
                   <List.Item.Detail.Metadata.Label title="Conversation Title" text={conversation.title} />
                   <List.Item.Detail.Metadata.Label title="Date Created" text={formatFullTime(conversation.createdAt)} />
+                  <List.Item.Detail.Metadata.Label
+                    title="Question Count"
+                    text={conversation.questions?.length.toString() ?? "0"}
+                  />
                   <List.Item.Detail.Metadata.Separator />
                   <List.Item.Detail.Metadata.Label title="Recent Questions" />
                   {conversation.questions?.map((q) => (
@@ -42,6 +47,11 @@ export default function Conversations() {
           actions={
             <ActionPanel>
               <Action title="Open Conversation" onAction={() => push(<Chat conversationId={conversation.id} />)} />
+              <Action
+                title="Update Conversation"
+                shortcut={Keyboard.Shortcut.Common.Edit}
+                onAction={() => push(<ConversationForm conversationId={conversation.id} />)}
+              />
               <Action
                 title="Delete Conversation"
                 style={Action.Style.Destructive}
