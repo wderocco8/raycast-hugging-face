@@ -1,13 +1,20 @@
 import { Action, ActionPanel, Keyboard, List, useNavigation } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
-import { useQuestions } from "./hooks/useQuestions";
 import Chat from "./chat";
+import { Conversation } from "./types/conversation";
 
 export default function Conversations() {
   const { data: conversations, isLoading: isLoadingConversations, remove: removeConversation } = useConversations();
-  const { getByConversationId } = useQuestions();
   const { push } = useNavigation();
+
+  // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
+  const markdown = (conversation: Conversation) =>
+    `
+  # ${conversation.title}
+
+  **Description:** [this will eventually be a brief description of the conversation]
+  `.trim();
 
   return (
     <List isShowingDetail isLoading={isLoadingConversations}>
@@ -19,18 +26,17 @@ export default function Conversations() {
           accessories={[{ text: formatRelativeTime(conversation.createdAt) }]} // TODO: maybe remove?
           detail={
             <List.Item.Detail
-              isLoading={false} // TODO: replace this with individual loader
+              isLoading={isLoadingConversations}
+              markdown={markdown(conversation)}
               metadata={
                 <List.Item.Detail.Metadata>
                   <List.Item.Detail.Metadata.Label title="Conversation Title" text={conversation.title} />
                   <List.Item.Detail.Metadata.Label title="Date Created" text={formatFullTime(conversation.createdAt)} />
                   <List.Item.Detail.Metadata.Separator />
                   <List.Item.Detail.Metadata.Label title="Recent Questions" />
-                  {getByConversationId(conversation.id)
-                    .slice(-5)
-                    .map((q) => (
-                      <List.Item.Detail.Metadata.Label title={`Q: ${q.prompt}`} key={q.id} />
-                    ))}
+                  {conversation.questions?.map((q) => (
+                    <List.Item.Detail.Metadata.Label title={`Q: ${q.prompt}`} key={q.id} />
+                  ))}
                 </List.Item.Detail.Metadata>
               }
             />
