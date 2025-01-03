@@ -11,8 +11,6 @@ export default function Conversations() {
   // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
   const markdown = (conversation: Conversation) =>
     `
-  # ${conversation.title}
-
   **Description:** [this will eventually be a brief description of the conversation]
   `.trim();
 
