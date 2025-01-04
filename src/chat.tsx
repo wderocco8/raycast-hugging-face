@@ -1,8 +1,7 @@
 /**
  * chat Command
  *
- * This file defines a form-based "rich text" interface for users to interact with the Hugging Face API.
- * It allows users to input a question, sends the question to the API, and redirects back to the given conversation in chat.tsx.
+ * This file defines a...
  *
  */
 
