@@ -8,7 +8,6 @@
 import { Action, ActionPanel, Form, useNavigation } from "@raycast/api";
 import { useState } from "react";
 import { FormValidation, useForm } from "@raycast/utils";
-import { v4 as uuidv4 } from "uuid";
 import { Question } from "../../types/question";
 
 interface AskQuestionFormValues {
@@ -17,11 +16,10 @@ interface AskQuestionFormValues {
 
 interface AskQuestionFormProps {
   initialQuestion: Question;
-  conversationId: string;
   onQuestionSubmit: (question: Question) => Promise<void>;
 }
 
-export default function AskQuestionForm({ initialQuestion, conversationId, onQuestionSubmit }: AskQuestionFormProps) {
+export default function AskQuestionForm({ initialQuestion, onQuestionSubmit }: AskQuestionFormProps) {
   const { pop } = useNavigation();
   const [loading, setLoading] = useState<boolean>(false);
 

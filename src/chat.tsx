@@ -150,13 +150,7 @@ export default function Chat({ conversationId }: ChatProps) {
           title="Rich Text Question"
           shortcut={{ modifiers: ["cmd"], key: "t" }}
           onAction={() =>
-            push(
-              <AskQuestionForm
-                initialQuestion={searchQuestion}
-                conversationId={searchQuestion.conversationId}
-                onQuestionSubmit={handleAskQuestion}
-              />,
-            )
+            push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
           }
         />
         <Action
