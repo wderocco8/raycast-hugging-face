@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Keyboard, List, useNavigation } from "@raycast/api";
+import { Action, ActionPanel, Alert, confirmAlert, Keyboard, List, useNavigation } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import Chat from "./chat";
@@ -17,10 +17,25 @@ export default function Conversations() {
   const [updateKey, setUpdateKey] = useState(0);
 
   // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
-  const markdown = (conversation: Conversation) =>
-    `
-  **Description:** [this will eventually be a brief description of the conversation]
-  `.trim();
+  // const markdown = (conversation: Conversation) =>
+  //   `
+  // **Description:** [this will eventually be a brief description of the conversation]
+  // `.trim();
+
+  const handleConfirmAlert = (conversation: Conversation) => {
+    return confirmAlert({
+      title: "Delete this conversation?",
+      message: "You will not be able to recover it",
+      primaryAction: {
+        title: "Delete",
+        style: Alert.ActionStyle.Destructive,
+        onAction: () => removeConversation(conversation),
+      },
+      dismissAction: {
+        title: "Cancel",
+      },
+    });
+  };
 
   return (
     <List
@@ -51,7 +66,7 @@ export default function Conversations() {
           detail={
             <List.Item.Detail
               isLoading={isLoadingConversations}
-              markdown={markdown(conversation)}
+              // markdown={markdown(conversation)}
               metadata={
                 <List.Item.Detail.Metadata>
                   <List.Item.Detail.Metadata.Label title="Conversation Title" text={conversation.title} />
@@ -104,7 +119,7 @@ export default function Conversations() {
                 title="Delete Conversation"
                 style={Action.Style.Destructive}
                 shortcut={Keyboard.Shortcut.Common.Remove}
-                onAction={() => removeConversation(conversation)}
+                onAction={() => handleConfirmAlert(conversation)}
               />
             </ActionPanel>
           }
