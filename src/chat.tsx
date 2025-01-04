@@ -7,7 +7,18 @@
  */
 
 import { useState } from "react";
-import { Action, ActionPanel, Icon, Keyboard, List, showToast, Toast, useNavigation } from "@raycast/api";
+import {
+  Action,
+  ActionPanel,
+  Alert,
+  confirmAlert,
+  Icon,
+  Keyboard,
+  List,
+  showToast,
+  Toast,
+  useNavigation,
+} from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
@@ -40,6 +51,7 @@ export default function Chat({ conversationId }: ChatProps) {
     getByConversationId,
     add: addQuestion,
     update: updateQuestion,
+    remove: removeQuestion,
     refresh: refreshQuestions,
   } = useQuestions();
   const questions = getByConversationId(searchQuestion.conversationId);
@@ -112,35 +124,61 @@ export default function Chat({ conversationId }: ChatProps) {
     }
   };
 
-  // TODO: while loading, NO actions should be rendered at all
-  const renderActions = () => (
-    <ActionPanel>
-      {isValidQuestionPrompt(searchQuestion.prompt) && (
-        <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
-      )}
+  const handleConfirmAlert = (question: Question) => {
+    return confirmAlert({
+      title: "Delete this question?",
+      message: "You will not be able to recover it",
+      primaryAction: {
+        title: "Delete",
+        style: Alert.ActionStyle.Destructive,
+        onAction: () => removeQuestion(question),
+      },
+      dismissAction: {
+        title: "Cancel",
+      },
+    });
+  };
 
-      <Action
-        title="Rich Text Question"
-        shortcut={{ modifiers: ["cmd"], key: "t" }}
-        onAction={() =>
-          push(
-            <AskQuestionForm
-              initialQuestion={searchQuestion.prompt}
-              conversationId={searchQuestion.conversationId}
-              onQuestionSubmit={handleAskQuestion}
-            />,
-          )
-        }
-      />
-      <Action
-        title="New Conversation"
-        shortcut={Keyboard.Shortcut.Common.New}
-        onAction={() =>
-          push(<Chat />, async () => {
-            await refreshQuestions();
-          })
-        }
-      />
+  // TODO: while loading, NO actions should be rendered at all (this causes MASSIVE performance bug tho... need to fix)
+  const renderActions = (question?: Question) => (
+    <ActionPanel>
+      <ActionPanel.Section>
+        {isValidQuestionPrompt(searchQuestion.prompt) && (
+          <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
+        )}
+        <Action
+          title="Rich Text Question"
+          shortcut={{ modifiers: ["cmd"], key: "t" }}
+          onAction={() =>
+            push(
+              <AskQuestionForm
+                initialQuestion={searchQuestion.prompt}
+                conversationId={searchQuestion.conversationId}
+                onQuestionSubmit={handleAskQuestion}
+              />,
+            )
+          }
+        />
+        <Action
+          title="New Conversation"
+          shortcut={Keyboard.Shortcut.Common.New}
+          onAction={() =>
+            push(<Chat />, async () => {
+              await refreshQuestions();
+            })
+          }
+        />
+      </ActionPanel.Section>
+      {question && (
+        <ActionPanel.Section>
+          <Action
+            title="Delete Question"
+            style={Action.Style.Destructive}
+            shortcut={Keyboard.Shortcut.Common.Remove}
+            onAction={() => handleConfirmAlert(question)}
+          />
+        </ActionPanel.Section>
+      )}
     </ActionPanel>
   );
 
@@ -168,7 +206,7 @@ export default function Chat({ conversationId }: ChatProps) {
               markdown={question.id === selectedQuestionId ? question.response || output : question.response}
             />
           }
-          actions={renderActions()}
+          actions={renderActions(question)}
         />
       ))}
     </List>
