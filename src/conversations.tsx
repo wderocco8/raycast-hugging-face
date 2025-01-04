@@ -53,14 +53,22 @@ export default function Conversations() {
           }
           actions={
             <ActionPanel>
-              <Action title="Open Conversation" onAction={() => push(<Chat conversationId={conversation.id} />)} />
+              <Action
+                title="Open Conversation"
+                onAction={() =>
+                  push(<Chat conversationId={conversation.id} />, async () => {
+                    await refresh(); // Refresh question-enriched conversations
+                    setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+                  })
+                }
+              />
               <Action
                 title="Update Conversation"
                 shortcut={Keyboard.Shortcut.Common.Edit}
                 onAction={() =>
                   push(<ConversationForm conversationId={conversation.id} />, async () => {
-                    await refresh() // Refresh conversations
-                    setUpdateKey((prev) => prev + 1) // Suposedly this force re-renders the List (can't tell tbh)
+                    await refresh();
+                    setUpdateKey((prev) => prev + 1);
                   })
                 }
               />

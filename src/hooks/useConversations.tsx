@@ -7,9 +7,10 @@ export function useConversations(): ConversationsHook {
   const [data, setData] = useState<Conversation[]>([]);
   const [isLoading, setLoading] = useState<boolean>(true);
   const {
-    getByConversationId: getQuestionsByConversationId,
-    removeByConversationId,
     isLoading: isLoadingQuestions,
+    getByConversationId: getQuestionsByConversationId,
+    removeByConversationId: removeQuestionByConversationId,
+    refresh: refreshQuestions,
   } = useQuestions();
 
   useEffect(() => {
@@ -95,7 +96,7 @@ export function useConversations(): ConversationsHook {
 
       try {
         // Remove all questions in conversation
-        await removeByConversationId(conversation.id);
+        await removeQuestionByConversationId(conversation.id);
 
         // Remove conversation
         const newData = data.filter((q) => q.id !== conversation.id);
@@ -119,10 +120,14 @@ export function useConversations(): ConversationsHook {
     setLoading(true);
     try {
       const stored = await LocalStorage.getItem<string>("conversations");
+
       if (stored) {
         // Default conversations stored without questions
         const items: Conversation[] = JSON.parse(stored);
         const sortedItems = items.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+        // Refresh questions hook in order to fetch latest enrichedItems
+        await refreshQuestions();
 
         // Enrich conversations with questions
         const enrichedItems = sortedItems.map((conversation) => ({
@@ -131,9 +136,11 @@ export function useConversations(): ConversationsHook {
         }));
 
         setData(enrichedItems);
+      } else {
+        console.error("Error refreshing conversations: No conversations found.");
       }
     } catch (error) {
-      console.error("Error refreshing conversation:", error);
+      console.error("Error refreshing conversations:", error);
     } finally {
       setLoading(false);
     }

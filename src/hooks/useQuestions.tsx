@@ -49,6 +49,7 @@ export function useQuestions(): QuestionsHook {
     [data],
   );
 
+  // TODO: fix to align with `add`
   const update = useCallback(async (question: Question) => {
     const toast = await showToast({
       title: "Updating question...",
@@ -63,6 +64,7 @@ export function useQuestions(): QuestionsHook {
     toast.style = Toast.Style.Success;
   }, []);
 
+  // TODO: fix to align with `add`
   const remove = useCallback(async (question: Question) => {
     const toast = await showToast({
       title: "Removing question...",
@@ -106,8 +108,23 @@ export function useQuestions(): QuestionsHook {
     [data],
   );
 
+  const refresh = useCallback(async () => {
+    setLoading(true);
+    try {
+      const stored = await LocalStorage.getItem<string>("questions");
+      if (stored) {
+        const items: Question[] = JSON.parse(stored);
+        setData(items);
+      }
+    } catch (error) {
+      console.error("Error refreshing conversations:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
   return useMemo(
-    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversationId }),
-    [data, isLoading, add, update, remove, removeByConversationId, getByConversationId],
+    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversationId, refresh }),
+    [data, isLoading, add, update, remove, removeByConversationId, getByConversationId, refresh],
   );
 }
