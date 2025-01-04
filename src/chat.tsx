@@ -24,6 +24,7 @@ export default function Chat({ conversationId }: ChatProps) {
   });
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
+  const [isAskingQuestion, setIsAskingQuestion] = useState<boolean>(false);
   const { add: addConversation } = useConversations();
   const {
     isLoading: isLoadingQuestions,
@@ -46,15 +47,16 @@ export default function Chat({ conversationId }: ChatProps) {
 
     // Create new conversation if first question
     if (questions.length === 0) {
-      addConversation({
+      await addConversation({
         id: conversationId ?? question.conversationId,
         title: "Untitled Conversation",
         createdAt: new Date().toISOString(),
       });
     }
 
-    // Clear output
+    // Clear output and stop showing ActionPanel
     setOutput("");
+    setIsAskingQuestion(true);
 
     // Take snapshot of questions (for generateResponse) and add new question
     const allQuestions = [...questions, question];
@@ -96,6 +98,8 @@ export default function Chat({ conversationId }: ChatProps) {
         title: "Error",
         message: "Failed to generate response. Please try again.",
       });
+    } finally {
+      setIsAskingQuestion(false);
     }
   };
 
