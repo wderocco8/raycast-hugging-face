@@ -1,28 +1,28 @@
 /**
  * AskQuestionForm Component
  *
- * This file defines a form-based "rich text" interface for users to interact with the Hugging Face API.
- * It allows users to input a question, sends the question to the API, and redirects back to the given conversation in chat.tsx.
- * 
+ * This file defines a...
+ *
  */
 
-import { Action, ActionPanel, Form, showToast, Toast } from "@raycast/api";
-import { generateResponse } from "../../api/huggingface";
+import { Action, ActionPanel, Form, useNavigation } from "@raycast/api";
 import { useState } from "react";
 import { FormValidation, useForm } from "@raycast/utils";
+import { v4 as uuidv4 } from "uuid";
+import { Question } from "../../types/question";
 
 interface AskQuestionFormValues {
   question: string;
 }
 
-interface AskQuestionFormProps{
-  initialQuestion: string
+interface AskQuestionFormProps {
+  initialQuestion: string;
+  conversationId: string;
+  onQuestionSubmit: (question: Question) => Promise<void>;
 }
 
-export default function AskQuestionForm({
-  initialQuestion
-}: AskQuestionFormProps) {
-  const [output, setOutput] = useState<string>("");
+export default function AskQuestionForm({ initialQuestion, conversationId, onQuestionSubmit }: AskQuestionFormProps) {
+  const { pop } = useNavigation();
   const [loading, setLoading] = useState<boolean>(false);
 
   const { handleSubmit, itemProps } = useForm<AskQuestionFormValues>({
@@ -31,7 +31,7 @@ export default function AskQuestionForm({
       handleGenerateResponse(values.question);
     },
     initialValues: {
-      question: initialQuestion
+      question: initialQuestion,
     },
     validation: {
       question: FormValidation.Required,
@@ -40,24 +40,19 @@ export default function AskQuestionForm({
 
   const handleGenerateResponse = async (question: string) => {
     setLoading(true);
-    showToast({
-      style: Toast.Style.Animated,
-      title: "Generating response...",
-    });
-
     try {
-      await generateResponse(question, setOutput);
-      showToast({
-        style: Toast.Style.Success,
-        title: "Response generated!",
-      });
+      const newQuestion = {
+        id: uuidv4(),
+        conversationId: conversationId,
+        prompt: question,
+        response: "",
+        createdAt: new Date().toISOString(),
+        isStreaming: true,
+      };
+      pop(); // Redirect back to Chat
+      await onQuestionSubmit(newQuestion);
     } catch (error) {
       console.error("Error in handleGenerateResponse:", error);
-      showToast({
-        style: Toast.Style.Failure,
-        title: "Error",
-        message: "Failed to generate response. Please try again.",
-      });
     } finally {
       setLoading(false);
     }
@@ -72,23 +67,11 @@ export default function AskQuestionForm({
       }
       isLoading={loading}
     >
-      <Form.TextArea title="question" placeholder="Enter a question to chat with Hugging Face..." {...itemProps.question} />
-      <Form.Description title="Output" text={output} />
+      <Form.TextArea
+        title="question"
+        placeholder="Enter a question to chat with Hugging Face..."
+        {...itemProps.question}
+      />
     </Form>
   );
 }
-
-// export default function Command() {
-//   const markdown = "API key incorrect. Please update it in extension preferences and try again.";
-
-//   return (
-//     <Detail
-//       markdown={markdown}
-//       actions={
-//         <ActionPanel>
-//           <Action title="Open Extension Preferences" onAction={openExtensionPreferences} />
-//         </ActionPanel>
-//       }
-//     />
-//   );
-// }

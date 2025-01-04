@@ -1,3 +1,11 @@
+/**
+ * chat Command
+ *
+ * This file defines a form-based "rich text" interface for users to interact with the Hugging Face API.
+ * It allows users to input a question, sends the question to the API, and redirects back to the given conversation in chat.tsx.
+ *
+ */
+
 import { useState } from "react";
 import { Action, ActionPanel, Icon, Keyboard, List, showToast, Toast, useNavigation } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
@@ -6,6 +14,7 @@ import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
 import { Question } from "./types/question";
 import { isValidQuestionPrompt } from "./utils/chat";
+import AskQuestionForm from "./views/question/AskQuestionForm";
 
 interface ChatProps {
   conversationId?: string;
@@ -109,6 +118,20 @@ export default function Chat({ conversationId }: ChatProps) {
       {isValidQuestionPrompt(searchQuestion.prompt) && (
         <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
       )}
+
+      <Action
+        title="Rich Text Question"
+        shortcut={{ modifiers: ["cmd"], key: "t" }}
+        onAction={() =>
+          push(
+            <AskQuestionForm
+              initialQuestion={searchQuestion.prompt}
+              conversationId={searchQuestion.conversationId}
+              onQuestionSubmit={handleAskQuestion}
+            />,
+          )
+        }
+      />
       <Action
         title="New Conversation"
         shortcut={Keyboard.Shortcut.Common.New}
