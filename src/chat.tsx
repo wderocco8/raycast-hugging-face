@@ -17,6 +17,7 @@ import {
   showToast,
   Toast,
   useNavigation,
+  Image,
 } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useConversations } from "./hooks/useConversations";
@@ -177,7 +178,7 @@ export default function Chat({ conversationId }: ChatProps) {
 
   return (
     <List
-      isShowingDetail={true}
+      isShowingDetail={questions.length !== 0}
       searchText={searchQuestion.prompt}
       onSearchTextChange={(prompt) => {
         setSearchQuestion((prevQuestion) => ({ ...prevQuestion, prompt }));
@@ -188,20 +189,28 @@ export default function Chat({ conversationId }: ChatProps) {
       onSelectionChange={setSelectedQuestionId}
       actions={renderActions()}
     >
-      {questions.map((question) => (
-        <List.Item
-          id={question.id}
-          key={question.id}
-          title={{ value: question.prompt, tooltip: question.prompt }}
-          accessories={question.isStreaming ? [{ icon: Icon.Dot }] : undefined}
-          detail={
-            <List.Item.Detail
-              markdown={question.id === selectedQuestionId ? question.response || output : question.response}
-            />
-          }
-          actions={renderActions(question)}
+      {questions.length === 0 ? (
+        <List.EmptyView
+          icon={{ source: "no-questions.jpeg", mask: Image.Mask.RoundedRectangle }}
+          title="No questions yet"
+          description="Get your questions answered with the power of AI 🧙‍♂️"
         />
-      ))}
+      ) : (
+        questions.map((question) => (
+          <List.Item
+            id={question.id}
+            key={question.id}
+            title={{ value: question.prompt, tooltip: question.prompt }}
+            accessories={question.isStreaming ? [{ icon: Icon.Dot }] : undefined}
+            detail={
+              <List.Item.Detail
+                markdown={question.id === selectedQuestionId ? question.response || output : question.response}
+              />
+            }
+            actions={renderActions(question)}
+          />
+        ))
+      )}
     </List>
   );
 }
