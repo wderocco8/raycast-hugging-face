@@ -152,7 +152,7 @@ export default function Chat({ conversationId }: ChatProps) {
           onAction={() =>
             push(
               <AskQuestionForm
-                initialQuestion={searchQuestion.prompt}
+                initialQuestion={searchQuestion}
                 conversationId={searchQuestion.conversationId}
                 onQuestionSubmit={handleAskQuestion}
               />,

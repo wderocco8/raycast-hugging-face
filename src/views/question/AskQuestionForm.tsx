@@ -16,7 +16,7 @@ interface AskQuestionFormValues {
 }
 
 interface AskQuestionFormProps {
-  initialQuestion: string;
+  initialQuestion: Question;
   conversationId: string;
   onQuestionSubmit: (question: Question) => Promise<void>;
 }
@@ -31,7 +31,7 @@ export default function AskQuestionForm({ initialQuestion, conversationId, onQue
       handleGenerateResponse(values.question);
     },
     initialValues: {
-      question: initialQuestion,
+      question: initialQuestion.prompt,
     },
     validation: {
       question: FormValidation.Required,
@@ -42,11 +42,8 @@ export default function AskQuestionForm({ initialQuestion, conversationId, onQue
     setLoading(true);
     try {
       const newQuestion = {
-        id: uuidv4(),
-        conversationId: conversationId,
+        ...initialQuestion,
         prompt: question,
-        response: "",
-        createdAt: new Date().toISOString(),
         isStreaming: true,
       };
       pop(); // Redirect back to Chat
