@@ -19,7 +19,7 @@
     },
     {
       "name": "conversations",
-      "title": "View Conversations",
+      "title": "Conversations",
       "description": "View your previous conversations.",
       "mode": "view"
     }

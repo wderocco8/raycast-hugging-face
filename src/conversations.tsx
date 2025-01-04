@@ -23,7 +23,25 @@ export default function Conversations() {
   `.trim();
 
   return (
-    <List isShowingDetail isLoading={isLoadingConversations} key={updateKey}>
+    <List
+      isShowingDetail
+      isLoading={isLoadingConversations}
+      key={updateKey}
+      actions={
+        <ActionPanel>
+          <Action
+            title="New Conversation"
+            shortcut={Keyboard.Shortcut.Common.New}
+            onAction={() =>
+              push(<Chat />, async () => {
+                await refresh(); // Refresh question-enriched conversations
+                setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+              })
+            }
+          />
+        </ActionPanel>
+      }
+    >
       {conversations.map((conversation) => (
         <List.Item
           key={conversation.id}
@@ -69,6 +87,16 @@ export default function Conversations() {
                   push(<ConversationForm conversationId={conversation.id} />, async () => {
                     await refresh();
                     setUpdateKey((prev) => prev + 1);
+                  })
+                }
+              />
+              <Action
+                title="New Conversation"
+                shortcut={Keyboard.Shortcut.Common.New}
+                onAction={() =>
+                  push(<Chat />, async () => {
+                    await refresh(); // Refresh question-enriched conversations
+                    setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
                   })
                 }
               />
