@@ -5,3 +5,5 @@ export interface Model {
   model: string;
   createdAt: string;
 }
+
+export type ModelSelection = Model | { id: "default"; name: "Default" };

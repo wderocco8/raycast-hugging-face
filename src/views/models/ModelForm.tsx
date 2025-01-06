@@ -54,7 +54,6 @@ export default function ModelForm() {
   return (
     <Form
       isLoading={loading}
-      enableDrafts
       actions={
         <ActionPanel>
           <Action.SubmitForm title="Chat" onSubmit={handleSubmit} />

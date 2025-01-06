@@ -5,33 +5,42 @@ import { ChatPreferences } from "../types/preferences";
 import fetch from "node-fetch";
 import { StreamedToken } from "../types/huggingface";
 import { Question } from "../types/question";
+import { Model } from "../types/model";
 
 const preferences = getPreferenceValues<ChatPreferences>();
 
-const model = "meta-llama/Meta-Llama-3-8B-Instruct";
+const defaultModel = "meta-llama/Meta-Llama-3-8B-Instruct";
 
 export async function generateResponse(
   questions: Question[],
   questionId: string,
   setOutput: React.Dispatch<React.SetStateAction<string>>,
+  model?: Model,
 ): Promise<string | false> {
   try {
     const lastIndex = questions.map((q) => q.id).indexOf(questionId);
     const filteredQuestions = questions.slice(0, lastIndex + 1);
+    const messages = [
+      { role: "system", content: model?.prompt ?? "You are a helpful assistant." },
+      ...filteredQuestions.map((q) => ({ role: "user", content: q.prompt })),
+    ];
 
-    const response = await fetch(`https://api-inference.huggingface.co/models/${model}/v1/chat/completions`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${preferences.access_token}`,
-        "Content-Type": "application/json",
+    const response = await fetch(
+      `https://api-inference.huggingface.co/models/${model?.model ?? defaultModel}/v1/chat/completions`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${preferences.access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: model?.model ?? defaultModel,
+          messages: messages,
+          max_tokens: 500,
+          stream: true,
+        }),
       },
-      body: JSON.stringify({
-        model: "meta-llama/Meta-Llama-3-8B-Instruct",
-        messages: filteredQuestions.map((q) => ({ role: "user", content: q.prompt })),
-        max_tokens: 500,
-        stream: true,
-      }),
-    });
+    );
 
     if (!response.ok) {
       const errorText = await response.text();

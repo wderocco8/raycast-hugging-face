@@ -27,6 +27,8 @@ import { Question } from "./types/question";
 import { isValidQuestionPrompt } from "./utils/chat";
 import AskQuestionForm from "./views/question/AskQuestionForm";
 import { formatFullTime } from "./utils/date/time";
+import { Model, ModelSelection } from "./types/model";
+import { useModels } from "./hooks/useModels";
 
 interface ChatProps {
   conversationId?: string;
@@ -57,6 +59,10 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     refresh: refreshQuestions,
   } = useQuestions();
   const questions = getByConversationId(searchQuestion.conversationId);
+  const { data: models, refresh: refreshModels } = useModels();
+  const [model, setModel] = useState<Model | null>(null);
+  const defaultModel = { id: "default", name: "Default" } as const;
+  const allModels: ModelSelection[] = [defaultModel, ...models];
 
   const handleAskQuestion = async (question: Question) => {
     if (!question.prompt) {
@@ -103,7 +109,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }));
 
     try {
-      const response = await generateResponse(allQuestions, question.id, setOutput);
+      const response = await generateResponse(allQuestions, question.id, setOutput, model ?? undefined);
       if (response) {
         // Update with finalized response
         await updateQuestion({ ...question, response, isStreaming: false });
@@ -139,6 +145,14 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         title: "Cancel",
       },
     });
+  };
+
+  const handleSearchBarAccessoryChange = (model: ModelSelection) => {
+    if (model.id === "default") {
+      setModel(null);
+    } else {
+      setModel(model as Model);
+    }
   };
 
   const renderActions = (question?: Question) =>
@@ -197,6 +211,21 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         setSearchQuestion((prevQuestion) => ({ ...prevQuestion, prompt }));
       }}
       searchBarPlaceholder="Ask a question..."
+      searchBarAccessory={
+        <List.Dropdown
+          tooltip="Select a model"
+          onChange={(modelId) => {
+            const selectedModel = allModels.find((m) => m.id === modelId);
+            if (selectedModel) {
+              handleSearchBarAccessoryChange(selectedModel);
+            }
+          }}
+        >
+          {allModels.map((model) => (
+            <List.Dropdown.Item title={model.name} value={model.id} key={model.id} />
+          ))}
+        </List.Dropdown>
+      }
       isLoading={isLoadingQuestions}
       selectedItemId={selectedQuestionId ?? undefined}
       // TODO: this might be an issue with Raycast itself (another extension had the same error https://github.com/raycast/extensions/issues/10844)
