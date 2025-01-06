@@ -163,15 +163,21 @@ export default function Chat({ conversationId }: ChatProps) {
             }
           />
         </ActionPanel.Section>
+        {/* ListItem-specific */}
         {question && (
-          <ActionPanel.Section>
-            <Action
-              title="Delete Question"
-              style={Action.Style.Destructive}
-              shortcut={Keyboard.Shortcut.Common.Remove}
-              onAction={() => handleConfirmAlert(question)}
-            />
-          </ActionPanel.Section>
+          <>
+            <ActionPanel.Section>
+              <Action.CopyToClipboard content={question.response} shortcut={Keyboard.Shortcut.Common.Copy} />
+            </ActionPanel.Section>
+            <ActionPanel.Section>
+              <Action
+                title="Delete Question"
+                style={Action.Style.Destructive}
+                shortcut={Keyboard.Shortcut.Common.Remove}
+                onAction={() => handleConfirmAlert(question)}
+              />
+            </ActionPanel.Section>
+          </>
         )}
       </ActionPanel>
     );
