@@ -46,6 +46,7 @@ export default function Chat({ conversationId }: ChatProps) {
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
   const [isAskingQuestion, setIsAskingQuestion] = useState<boolean>(false);
+  const [isShowingMetaData, setIsShowingMetadata] = useState<boolean>(true);
   const { add: addConversation } = useConversations();
   const {
     isLoading: isLoadingQuestions,
@@ -163,6 +164,11 @@ export default function Chat({ conversationId }: ChatProps) {
               })
             }
           />
+          <Action
+            title="Toggle Metadata"
+            shortcut={{ modifiers: ["cmd"], key: "m" }}
+            onAction={() => setIsShowingMetadata((prev) => !prev)}
+          />
         </ActionPanel.Section>
         {/* ListItem-specific */}
         {question && (
@@ -214,11 +220,13 @@ export default function Chat({ conversationId }: ChatProps) {
               <List.Item.Detail
                 markdown={question.id === selectedQuestionId ? question.response || output : question.response}
                 metadata={
-                  <List.Item.Detail.Metadata>
-                    <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
-                    <List.Item.Detail.Metadata.Separator />
-                    <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
-                  </List.Item.Detail.Metadata>
+                  isShowingMetaData && (
+                    <List.Item.Detail.Metadata>
+                      <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
+                      <List.Item.Detail.Metadata.Separator />
+                      <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
+                    </List.Item.Detail.Metadata>
+                  )
                 }
               />
             }
