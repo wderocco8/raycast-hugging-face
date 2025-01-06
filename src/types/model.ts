@@ -1,6 +1,7 @@
 export interface Model {
   id: string;
-  modelName: string;
+  name: string;
   prompt: string;
+  model: string;
   createdAt: string;
 }

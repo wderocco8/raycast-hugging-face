@@ -7,7 +7,8 @@ import { StreamedToken } from "../types/huggingface";
 import { Question } from "../types/question";
 
 const preferences = getPreferenceValues<ChatPreferences>();
-const model = "meta-llama/Meta-Llama-3-8B-Instruct/v1";
+
+const model = "meta-llama/Meta-Llama-3-8B-Instruct";
 
 export async function generateResponse(
   questions: Question[],
@@ -18,7 +19,7 @@ export async function generateResponse(
     const lastIndex = questions.map((q) => q.id).indexOf(questionId);
     const filteredQuestions = questions.slice(0, lastIndex + 1);
 
-    const response = await fetch(`https://api-inference.huggingface.co/models/${model}/chat/completions`, {
+    const response = await fetch(`https://api-inference.huggingface.co/models/${model}/v1/chat/completions`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${preferences.access_token}`,
