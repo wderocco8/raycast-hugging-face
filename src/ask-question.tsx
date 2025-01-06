@@ -32,7 +32,7 @@ interface ChatProps {
   conversationId?: string;
 }
 
-export default function Chat({ conversationId }: ChatProps) {
+export default function AskQuestion({ conversationId }: ChatProps) {
   const { push } = useNavigation();
 
   const [searchQuestion, setSearchQuestion] = useState<Question>({
@@ -159,7 +159,7 @@ export default function Chat({ conversationId }: ChatProps) {
             title="New Conversation"
             shortcut={Keyboard.Shortcut.Common.New}
             onAction={() =>
-              push(<Chat />, async () => {
+              push(<AskQuestion />, async () => {
                 await refreshQuestions();
               })
             }

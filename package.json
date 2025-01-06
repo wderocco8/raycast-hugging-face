@@ -12,8 +12,8 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "chat",
-      "title": "Chat",
+      "name": "ask-question",
+      "title": "Ask Question",
       "description": "Chat with Hugging Face Inference API.",
       "mode": "view"
     },

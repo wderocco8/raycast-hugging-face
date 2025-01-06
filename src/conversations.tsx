@@ -1,7 +1,7 @@
 import { Action, ActionPanel, Alert, confirmAlert, Keyboard, List, useNavigation, Image } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
-import Chat from "./chat";
+import AskQuestion from "./ask-question";
 import { Conversation } from "./types/conversation";
 import ConversationForm from "./views/conversations/ConversationForm";
 import { useState } from "react";
@@ -43,7 +43,7 @@ export default function Conversations() {
         title="New Conversation"
         shortcut={Keyboard.Shortcut.Common.New}
         onAction={() =>
-          push(<Chat />, async () => {
+          push(<AskQuestion />, async () => {
             await refresh(); // Refresh question-enriched conversations
             setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
           })
@@ -57,7 +57,7 @@ export default function Conversations() {
       <Action
         title="Open Conversation"
         onAction={() =>
-          push(<Chat conversationId={conversation.id} />, async () => {
+          push(<AskQuestion conversationId={conversation.id} />, async () => {
             await refresh(); // Refresh question-enriched conversations
             setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
           })
@@ -77,7 +77,7 @@ export default function Conversations() {
         title="New Conversation"
         shortcut={Keyboard.Shortcut.Common.New}
         onAction={() =>
-          push(<Chat />, async () => {
+          push(<AskQuestion />, async () => {
             await refresh(); // Refresh question-enriched conversations
             setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
           })
