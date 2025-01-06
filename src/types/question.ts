@@ -5,15 +5,5 @@ export interface Question {
   response: string;
   createdAt: string;
   isStreaming: boolean;
-}
-
-export interface QuestionsHook {
-  data: Question[];
-  isLoading: boolean;
-  add: (question: Question) => Promise<void>;
-  update: (question: Question) => Promise<void>;
-  remove: (question: Question) => Promise<void>;
-  removeByConversationId: (conversationId: string) => Promise<void>;
-  getByConversationId: (conversationId: string) => Question[];
-  refresh: () => Promise<void>;
+  modelId?: string;
 }
