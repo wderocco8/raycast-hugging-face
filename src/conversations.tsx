@@ -19,7 +19,7 @@ export default function Conversations() {
   // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
   // const markdown = (conversation: Conversation) =>
   //   `
-  // **Description:** [this will eventually be a brief description of the conversation]
+  // **Description:** [AI summary of convo -> based on first question]
   // `.trim();
 
   const handleConfirmAlert = (conversation: Conversation) => {
@@ -37,26 +37,63 @@ export default function Conversations() {
     });
   };
 
+  const renderListActions = () => (
+    <ActionPanel>
+      <Action
+        title="New Conversation"
+        shortcut={Keyboard.Shortcut.Common.New}
+        onAction={() =>
+          push(<Chat />, async () => {
+            await refresh(); // Refresh question-enriched conversations
+            setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+          })
+        }
+      />
+    </ActionPanel>
+  );
+
+  const renderListItemActions = (conversation: Conversation) => (
+    <ActionPanel>
+      <Action
+        title="Open Conversation"
+        onAction={() =>
+          push(<Chat conversationId={conversation.id} />, async () => {
+            await refresh(); // Refresh question-enriched conversations
+            setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+          })
+        }
+      />
+      <Action
+        title="Update Conversation"
+        shortcut={Keyboard.Shortcut.Common.Edit}
+        onAction={() =>
+          push(<ConversationForm conversationId={conversation.id} />, async () => {
+            await refresh();
+            setUpdateKey((prev) => prev + 1);
+          })
+        }
+      />
+      <Action
+        title="New Conversation"
+        shortcut={Keyboard.Shortcut.Common.New}
+        onAction={() =>
+          push(<Chat />, async () => {
+            await refresh(); // Refresh question-enriched conversations
+            setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+          })
+        }
+      />
+      <Action
+        title="Delete Conversation"
+        style={Action.Style.Destructive}
+        shortcut={Keyboard.Shortcut.Common.Remove}
+        onAction={() => handleConfirmAlert(conversation)}
+      />
+    </ActionPanel>
+  );
+
   return (
-    <List
-      isShowingDetail
-      isLoading={isLoadingConversations}
-      key={updateKey}
-      actions={
-        <ActionPanel>
-          <Action
-            title="New Conversation"
-            shortcut={Keyboard.Shortcut.Common.New}
-            onAction={() =>
-              push(<Chat />, async () => {
-                await refresh(); // Refresh question-enriched conversations
-                setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
-              })
-            }
-          />
-        </ActionPanel>
-      }
-    >
+    <List isShowingDetail isLoading={isLoadingConversations} key={updateKey} actions={renderListActions()}>
       {conversations.map((conversation) => (
         <List.Item
           key={conversation.id}
@@ -84,45 +121,7 @@ export default function Conversations() {
               }
             />
           }
-          actions={
-            <ActionPanel>
-              <Action
-                title="Open Conversation"
-                onAction={() =>
-                  push(<Chat conversationId={conversation.id} />, async () => {
-                    await refresh(); // Refresh question-enriched conversations
-                    setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
-                  })
-                }
-              />
-              <Action
-                title="Update Conversation"
-                shortcut={Keyboard.Shortcut.Common.Edit}
-                onAction={() =>
-                  push(<ConversationForm conversationId={conversation.id} />, async () => {
-                    await refresh();
-                    setUpdateKey((prev) => prev + 1);
-                  })
-                }
-              />
-              <Action
-                title="New Conversation"
-                shortcut={Keyboard.Shortcut.Common.New}
-                onAction={() =>
-                  push(<Chat />, async () => {
-                    await refresh(); // Refresh question-enriched conversations
-                    setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
-                  })
-                }
-              />
-              <Action
-                title="Delete Conversation"
-                style={Action.Style.Destructive}
-                shortcut={Keyboard.Shortcut.Common.Remove}
-                onAction={() => handleConfirmAlert(conversation)}
-              />
-            </ActionPanel>
-          }
+          actions={renderListItemActions(conversation)}
         />
       ))}
     </List>
