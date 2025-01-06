@@ -26,7 +26,6 @@ export async function generateResponse(
       },
       body: JSON.stringify({
         model: "meta-llama/Meta-Llama-3-8B-Instruct",
-        // messages: [{ role: "user", content: question }],
         messages: filteredQuestions.map((q) => ({ role: "user", content: q.prompt })),
         max_tokens: 500,
         stream: true,

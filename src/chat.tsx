@@ -139,42 +139,42 @@ export default function Chat({ conversationId }: ChatProps) {
     });
   };
 
-  // TODO: while loading, NO actions should be rendered at all (this causes MASSIVE performance bug tho... need to fix)
-  const renderActions = (question?: Question) => (
-    <ActionPanel>
-      <ActionPanel.Section>
-        {isValidQuestionPrompt(searchQuestion.prompt) && (
-          <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
-        )}
-        <Action
-          title="Rich Text Question"
-          shortcut={{ modifiers: ["cmd"], key: "t" }}
-          onAction={() =>
-            push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
-          }
-        />
-        <Action
-          title="New Conversation"
-          shortcut={Keyboard.Shortcut.Common.New}
-          onAction={() =>
-            push(<Chat />, async () => {
-              await refreshQuestions();
-            })
-          }
-        />
-      </ActionPanel.Section>
-      {question && (
+  const renderActions = (question?: Question) =>
+    !isAskingQuestion && (
+      <ActionPanel>
         <ActionPanel.Section>
+          {isValidQuestionPrompt(searchQuestion.prompt) && (
+            <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
+          )}
           <Action
-            title="Delete Question"
-            style={Action.Style.Destructive}
-            shortcut={Keyboard.Shortcut.Common.Remove}
-            onAction={() => handleConfirmAlert(question)}
+            title="Rich Text Question"
+            shortcut={{ modifiers: ["cmd"], key: "t" }}
+            onAction={() =>
+              push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
+            }
+          />
+          <Action
+            title="New Conversation"
+            shortcut={Keyboard.Shortcut.Common.New}
+            onAction={() =>
+              push(<Chat />, async () => {
+                await refreshQuestions();
+              })
+            }
           />
         </ActionPanel.Section>
-      )}
-    </ActionPanel>
-  );
+        {question && (
+          <ActionPanel.Section>
+            <Action
+              title="Delete Question"
+              style={Action.Style.Destructive}
+              shortcut={Keyboard.Shortcut.Common.Remove}
+              onAction={() => handleConfirmAlert(question)}
+            />
+          </ActionPanel.Section>
+        )}
+      </ActionPanel>
+    );
 
   return (
     <List
@@ -186,7 +186,8 @@ export default function Chat({ conversationId }: ChatProps) {
       searchBarPlaceholder="Ask a question..."
       isLoading={isLoadingQuestions}
       selectedItemId={selectedQuestionId ?? undefined}
-      onSelectionChange={setSelectedQuestionId}
+      // TODO: this might be an issue with Raycast itself (another extension had the same error https://github.com/raycast/extensions/issues/10844)
+      // onSelectionChange causes race condition :..(
       actions={renderActions()}
     >
       {questions.length === 0 ? (
