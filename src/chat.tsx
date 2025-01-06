@@ -26,6 +26,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Question } from "./types/question";
 import { isValidQuestionPrompt } from "./utils/chat";
 import AskQuestionForm from "./views/question/AskQuestionForm";
+import { formatFullTime } from "./utils/date/time";
 
 interface ChatProps {
   conversationId?: string;
@@ -212,6 +213,13 @@ export default function Chat({ conversationId }: ChatProps) {
             detail={
               <List.Item.Detail
                 markdown={question.id === selectedQuestionId ? question.response || output : question.response}
+                metadata={
+                  <List.Item.Detail.Metadata>
+                    <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
+                  </List.Item.Detail.Metadata>
+                }
               />
             }
             actions={renderActions(question)}
