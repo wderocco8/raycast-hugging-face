@@ -22,7 +22,7 @@ export default function Conversations() {
   // **Description:** [AI summary of convo -> based on first question]
   // `.trim();
 
-  const handleConfirmAlert = (conversation: Conversation) => {
+  const handleConfirmDelete = (conversation: Conversation) => {
     return confirmAlert({
       title: "Delete this conversation?",
       message: "You will not be able to recover it",
@@ -87,7 +87,7 @@ export default function Conversations() {
         title="Delete Conversation"
         style={Action.Style.Destructive}
         shortcut={Keyboard.Shortcut.Common.Remove}
-        onAction={() => handleConfirmAlert(conversation)}
+        onAction={() => handleConfirmDelete(conversation)}
       />
     </ActionPanel>
   );

@@ -18,6 +18,7 @@ import {
   Toast,
   useNavigation,
   Image,
+  Color,
 } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useConversations } from "./hooks/useConversations";
@@ -27,6 +28,8 @@ import { Question } from "./types/question";
 import { isValidQuestionPrompt } from "./utils/chat";
 import AskQuestionForm from "./views/question/AskQuestionForm";
 import { formatFullTime } from "./utils/date/time";
+import { Model, ModelSelection } from "./types/model";
+import { useModels } from "./hooks/useModels";
 
 interface ChatProps {
   conversationId?: string;
@@ -57,6 +60,10 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     refresh: refreshQuestions,
   } = useQuestions();
   const questions = getByConversationId(searchQuestion.conversationId);
+  const { data: models } = useModels();
+  const [model, setModel] = useState<Model | null>(null);
+  const defaultModel = { id: "default", name: "Default" } as const;
+  const allModels: ModelSelection[] = [defaultModel, ...models];
 
   const handleAskQuestion = async (question: Question) => {
     if (!question.prompt) {
@@ -66,6 +73,11 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         title: "Question cannot be empty",
       });
       return;
+    }
+
+    // Add model to question if exists
+    if (model) {
+      question = { ...question, modelId: model.id };
     }
 
     // Create new conversation if first question
@@ -103,7 +115,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }));
 
     try {
-      const response = await generateResponse(allQuestions, question.id, setOutput);
+      const response = await generateResponse(allQuestions, question.id, setOutput, model ?? undefined);
       if (response) {
         // Update with finalized response
         await updateQuestion({ ...question, response, isStreaming: false });
@@ -126,7 +138,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }
   };
 
-  const handleConfirmAlert = (question: Question) => {
+  const handleConfirmDelete = (question: Question) => {
     return confirmAlert({
       title: "Delete this question?",
       message: "You will not be able to recover it",
@@ -139,6 +151,40 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         title: "Cancel",
       },
     });
+  };
+
+  const handleSearchBarAccessoryChange = (model: ModelSelection) => {
+    if (model.id === "default") {
+      setModel(null);
+    } else {
+      setModel(model as Model);
+    }
+  };
+
+  const renderMetaData = (question: Question) => {
+    const model = models.find((m) => m.id === question.modelId)?.name;
+    const isDefaultModel = !model;
+    return (
+      <List.Item.Detail.Metadata>
+        <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
+        <List.Item.Detail.Metadata.Separator />
+        <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
+        <List.Item.Detail.Metadata.Separator />
+        <List.Item.Detail.Metadata.TagList title="Model">
+          {isDefaultModel ? (
+            <List.Item.Detail.Metadata.TagList.Item
+              text={"Default"}
+              color={Color.SecondaryText}
+            />
+          ) : (
+            <List.Item.Detail.Metadata.TagList.Item
+              text={models.find((m) => m.id === question.modelId)?.name}
+              color={Color.Blue}
+            />
+          )}
+        </List.Item.Detail.Metadata.TagList>
+      </List.Item.Detail.Metadata>
+    );
   };
 
   const renderActions = (question?: Question) =>
@@ -181,7 +227,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
                 title="Delete Question"
                 style={Action.Style.Destructive}
                 shortcut={Keyboard.Shortcut.Common.Remove}
-                onAction={() => handleConfirmAlert(question)}
+                onAction={() => handleConfirmDelete(question)}
               />
             </ActionPanel.Section>
           </>
@@ -197,6 +243,21 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         setSearchQuestion((prevQuestion) => ({ ...prevQuestion, prompt }));
       }}
       searchBarPlaceholder="Ask a question..."
+      searchBarAccessory={
+        <List.Dropdown
+          tooltip="Select a model"
+          onChange={(modelId) => {
+            const selectedModel = allModels.find((m) => m.id === modelId);
+            if (selectedModel) {
+              handleSearchBarAccessoryChange(selectedModel);
+            }
+          }}
+        >
+          {allModels.map((model) => (
+            <List.Dropdown.Item title={model.name} value={model.id} key={model.id} />
+          ))}
+        </List.Dropdown>
+      }
       isLoading={isLoadingQuestions}
       selectedItemId={selectedQuestionId ?? undefined}
       // TODO: this might be an issue with Raycast itself (another extension had the same error https://github.com/raycast/extensions/issues/10844)
@@ -219,15 +280,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             detail={
               <List.Item.Detail
                 markdown={question.id === selectedQuestionId ? question.response || output : question.response}
-                metadata={
-                  isShowingMetaData && (
-                    <List.Item.Detail.Metadata>
-                      <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
-                      <List.Item.Detail.Metadata.Separator />
-                      <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
-                    </List.Item.Detail.Metadata>
-                  )
-                }
+                metadata={isShowingMetaData && renderMetaData(question)}
               />
             }
             actions={renderActions(question)}

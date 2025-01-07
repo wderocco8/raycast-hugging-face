@@ -22,6 +22,12 @@
       "title": "Conversations",
       "description": "View your previous conversations.",
       "mode": "view"
+    },
+    {
+      "name": "models",
+      "title": "Models",
+      "description": "View and create custom chat models.",
+      "mode": "view"
     }
   ],
   "preferences": [

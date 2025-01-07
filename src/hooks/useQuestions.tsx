@@ -1,8 +1,8 @@
 import { LocalStorage, showToast, Toast } from "@raycast/api";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { QuestionsHook, Question } from "../types/question";
+import { Question } from "../types/question";
 
-export function useQuestions(): QuestionsHook {
+export function useQuestions() {
   const [data, setData] = useState<Question[]>([]);
   const [isLoading, setLoading] = useState<boolean>(true);
 
@@ -101,6 +101,28 @@ export function useQuestions(): QuestionsHook {
     }
   }, []);
 
+  const updateQuestionsByModelId = useCallback(async (modelId: string) => {
+    const toast = await showToast({
+      title: "Updating questions for this model...",
+      style: Toast.Style.Animated,
+    });
+
+    try {
+      setData((prev) => {
+        const newData = prev.map((q) => (q.modelId === modelId ? { ...q, modelId: undefined } : q));
+        saveToLocalStorage(newData);
+        return newData;
+      });
+
+      toast.title = "Model questions updated!";
+      toast.style = Toast.Style.Success;
+    } catch (error) {
+      console.error("Failed to update model questions:", error);
+      toast.title = "Failed to update model questions";
+      toast.style = Toast.Style.Failure;
+    }
+  }, []);
+
   const getByConversationId = useCallback(
     (conversationId: string) => {
       return data.filter((q) => q.conversationId === conversationId);
@@ -124,7 +146,27 @@ export function useQuestions(): QuestionsHook {
   }, []);
 
   return useMemo(
-    () => ({ data, isLoading, add, update, remove, removeByConversationId, getByConversationId, refresh }),
-    [data, isLoading, add, update, remove, removeByConversationId, getByConversationId, refresh],
+    () => ({
+      data,
+      isLoading,
+      add,
+      update,
+      remove,
+      removeByConversationId,
+      getByConversationId,
+      updateQuestionsByModelId,
+      refresh,
+    }),
+    [
+      data,
+      isLoading,
+      add,
+      update,
+      remove,
+      removeByConversationId,
+      getByConversationId,
+      updateQuestionsByModelId,
+      refresh,
+    ],
   );
 }

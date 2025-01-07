@@ -64,7 +64,7 @@ export default function AskQuestionForm({ initialQuestion, onQuestionSubmit }: A
       isLoading={loading}
     >
       <Form.TextArea
-        title="question"
+        title="Question"
         placeholder="Enter a question to chat with Hugging Face..."
         {...itemProps.question}
       />

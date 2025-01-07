@@ -1,9 +1,9 @@
 import { LocalStorage, showToast, Toast } from "@raycast/api";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { Conversation, ConversationsHook } from "../types/conversation";
+import { Conversation } from "../types/conversation";
 import { useQuestions } from "./useQuestions";
 
-export function useConversations(): ConversationsHook {
+export function useConversations() {
   const [data, setData] = useState<Conversation[]>([]);
   const [isLoading, setLoading] = useState<boolean>(true);
   const {

@@ -2,9 +2,6 @@
 
 <!-- Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. -->
 
-## PR Dependencies
-<!-- Add the phrases "depends on" or "blocked by" followed the link to the pull request, and the action will make sure to block merging this PR until the dependent PR is closed. See https://github.com/gregsdennis/dependencies-action for details. -->
-
 ## Type of change
 
 - [ ] Fix: Bug fix (non-breaking change which fixes an issue)
@@ -17,7 +14,6 @@
 ## Tests Performed
 
 <!-- Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration. Write details that help to start the tests -->
-
 
 ## Screenshots
 
