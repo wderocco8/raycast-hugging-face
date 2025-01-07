@@ -30,8 +30,6 @@ export default function Models() {
     });
   };
 
-  const renderMarkdown = (model: Model) => `**Prompt:** ${model.prompt}`;
-
   const renderListActions = () => (
     <ActionPanel>
       <Action
@@ -83,7 +81,7 @@ export default function Models() {
             detail={
               <List.Item.Detail
                 isLoading={isLoadingModels}
-                markdown={renderMarkdown(model)}
+                markdown={model.prompt}
                 metadata={
                   <List.Item.Detail.Metadata>
                     <List.Item.Detail.Metadata.TagList title="Name">
@@ -93,7 +91,6 @@ export default function Models() {
                         <List.Item.Detail.Metadata.TagList.Item text={"Default"} color={Color.SecondaryText} />
                       )}
                     </List.Item.Detail.Metadata.TagList>
-                    {/* <List.Item.Detail.Metadata.Label title="Model" text={model.model} /> */}
                     <List.Item.Detail.Metadata.Link
                       title="Model"
                       target={`https://huggingface.co/${model.model}`}
