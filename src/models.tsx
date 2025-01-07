@@ -93,7 +93,12 @@ export default function Models() {
                         <List.Item.Detail.Metadata.TagList.Item text={"Default"} color={Color.SecondaryText} />
                       )}
                     </List.Item.Detail.Metadata.TagList>
-                    <List.Item.Detail.Metadata.Label title="Model" text={model.model} />
+                    {/* <List.Item.Detail.Metadata.Label title="Model" text={model.model} /> */}
+                    <List.Item.Detail.Metadata.Link
+                      title="Model"
+                      target={`https://huggingface.co/${model.model}`}
+                      text={model.model}
+                    />
                     <List.Item.Detail.Metadata.Separator />
                     <List.Item.Detail.Metadata.Label title="Date Created" text={formatFullTime(model.createdAt)} />
                   </List.Item.Detail.Metadata>
