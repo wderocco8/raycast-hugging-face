@@ -138,7 +138,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }
   };
 
-  const handleConfirmAlert = (question: Question) => {
+  const handleConfirmDelete = (question: Question) => {
     return confirmAlert({
       title: "Delete this question?",
       message: "You will not be able to recover it",
@@ -227,7 +227,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
                 title="Delete Question"
                 style={Action.Style.Destructive}
                 shortcut={Keyboard.Shortcut.Common.Remove}
-                onAction={() => handleConfirmAlert(question)}
+                onAction={() => handleConfirmDelete(question)}
               />
             </ActionPanel.Section>
           </>

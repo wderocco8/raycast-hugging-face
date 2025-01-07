@@ -40,7 +40,7 @@ export function useModels() {
         title: "Creating model...",
         style: Toast.Style.Animated,
       });
-      const newData = [...data, model];
+      const newData = [model, ...data];
       await saveToLocalStorage(newData);
       setData(newData);
 
