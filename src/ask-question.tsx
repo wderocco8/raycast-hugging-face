@@ -18,6 +18,7 @@ import {
   Toast,
   useNavigation,
   Image,
+  Color,
 } from "@raycast/api";
 import { generateResponse } from "./api/huggingface";
 import { useConversations } from "./hooks/useConversations";
@@ -59,7 +60,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     refresh: refreshQuestions,
   } = useQuestions();
   const questions = getByConversationId(searchQuestion.conversationId);
-  const { data: models, refresh: refreshModels } = useModels();
+  const { data: models } = useModels();
   const [model, setModel] = useState<Model | null>(null);
   const defaultModel = { id: "default", name: "Default" } as const;
   const allModels: ModelSelection[] = [defaultModel, ...models];
@@ -72,6 +73,11 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         title: "Question cannot be empty",
       });
       return;
+    }
+
+    // Add model to question if exists
+    if (model) {
+      question = { ...question, modelId: model.id };
     }
 
     // Create new conversation if first question
@@ -153,6 +159,32 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     } else {
       setModel(model as Model);
     }
+  };
+
+  const renderMetaData = (question: Question) => {
+    const model = models.find((m) => m.id === question.modelId)?.name;
+    const isDefaultModel = !model;
+    return (
+      <List.Item.Detail.Metadata>
+        <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
+        <List.Item.Detail.Metadata.Separator />
+        <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
+        <List.Item.Detail.Metadata.Separator />
+        <List.Item.Detail.Metadata.TagList title="Model">
+          {isDefaultModel ? (
+            <List.Item.Detail.Metadata.TagList.Item
+              text={"Default"}
+              color={Color.SecondaryText}
+            />
+          ) : (
+            <List.Item.Detail.Metadata.TagList.Item
+              text={models.find((m) => m.id === question.modelId)?.name}
+              color={Color.Blue}
+            />
+          )}
+        </List.Item.Detail.Metadata.TagList>
+      </List.Item.Detail.Metadata>
+    );
   };
 
   const renderActions = (question?: Question) =>
@@ -248,15 +280,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             detail={
               <List.Item.Detail
                 markdown={question.id === selectedQuestionId ? question.response || output : question.response}
-                metadata={
-                  isShowingMetaData && (
-                    <List.Item.Detail.Metadata>
-                      <List.Item.Detail.Metadata.Label title="Question" text={question.prompt} />
-                      <List.Item.Detail.Metadata.Separator />
-                      <List.Item.Detail.Metadata.Label title="Date" text={formatFullTime(question.createdAt)} />
-                    </List.Item.Detail.Metadata>
-                  )
-                }
+                metadata={isShowingMetaData && renderMetaData(question)}
               />
             }
             actions={renderActions(question)}

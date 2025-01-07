@@ -32,7 +32,7 @@ export default function ModelForm() {
 
       await add({
         id: uuidv4(),
-        name: values.name ?? "Untitled Model",
+        name: values.name || "Untitled Model",
         prompt: values.prompt,
         model: values.model,
         createdAt: new Date().toISOString(),
@@ -56,13 +56,13 @@ export default function ModelForm() {
       isLoading={loading}
       actions={
         <ActionPanel>
-          <Action.SubmitForm title="Chat" onSubmit={handleSubmit} />
+          <Action.SubmitForm title="Create Model" onSubmit={handleSubmit} />
         </ActionPanel>
       }
     >
       <Form.TextField
         title="Name"
-        placeholder="Enter a custom name to reference the form (optional)..."
+        placeholder="Enter a custom name (optional)..."
         {...itemProps.name}
       />
       <Form.TextArea title="Prompt" placeholder="Enter a custom prompt..." {...itemProps.prompt} />
