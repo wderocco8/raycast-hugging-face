@@ -3,7 +3,7 @@
 import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
 import fetch from "node-fetch";
-import { StreamedToken } from "../types/huggingface";
+import { StreamedToken } from "../types/hugging-face";
 import { Question } from "../types/question";
 import { Model } from "../types/model";
 

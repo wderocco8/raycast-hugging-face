@@ -3,7 +3,7 @@ import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import AskQuestion from "./ask-question";
 import { Conversation } from "./types/conversation";
-import ConversationForm from "./views/conversations/ConversationForm";
+import ConversationForm from "./views/conversations/conversation-form";
 import { useState } from "react";
 
 export default function Conversations() {

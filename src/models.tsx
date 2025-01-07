@@ -6,7 +6,7 @@
  */
 
 import { Action, ActionPanel, Alert, Color, confirmAlert, Image, Keyboard, List, useNavigation } from "@raycast/api";
-import ModelForm from "./views/models/ModelForm";
+import ModelForm from "./views/models/model-form";
 import { useModels } from "./hooks/useModels";
 import { Model } from "./types/model";
 import { formatFullTime } from "./utils/date/time";

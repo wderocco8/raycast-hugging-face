@@ -20,13 +20,13 @@ import {
   Image,
   Color,
 } from "@raycast/api";
-import { generateResponse } from "./api/huggingface";
+import { generateResponse } from "./api/hugging-face";
 import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
 import { Question } from "./types/question";
 import { isValidQuestionPrompt } from "./utils/chat";
-import AskQuestionForm from "./views/question/AskQuestionForm";
+import AskQuestionForm from "./views/question/ask-question-form";
 import { formatFullTime } from "./utils/date/time";
 import { Model, ModelSelection } from "./types/model";
 import { useModels } from "./hooks/useModels";
