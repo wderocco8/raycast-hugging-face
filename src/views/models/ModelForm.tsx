@@ -60,21 +60,17 @@ export default function ModelForm() {
         </ActionPanel>
       }
     >
-      <Form.TextField
-        title="Name"
-        placeholder="Enter a custom name (optional)..."
-        {...itemProps.name}
-      />
+      <Form.TextField title="Name" placeholder="Enter a custom name (optional)..." {...itemProps.name} />
       <Form.TextArea title="Prompt" placeholder="Enter a custom prompt..." {...itemProps.prompt} />
       {/* TODO: add ability to request new models */}
       <Form.Dropdown
-        title="Prompt"
+        title="Model"
         placeholder="Enter a custom prompt..."
         {...itemProps.model}
         info="To find more models, go to..."
       >
-        {models.map((model) => (
-          <Form.Dropdown.Item value={model} title={model} />
+        {models.map((model, index) => (
+          <Form.Dropdown.Item key={index} value={model} title={model} />
         ))}
       </Form.Dropdown>
     </Form>

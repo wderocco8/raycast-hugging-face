@@ -10,10 +10,12 @@ import ModelForm from "./views/models/ModelForm";
 import { useModels } from "./hooks/useModels";
 import { Model } from "./types/model";
 import { formatFullTime } from "./utils/date/time";
+import { useEffect, useState } from "react";
 
 export default function Models() {
   const { push } = useNavigation();
   const { data: models, remove: removeModel, refresh: refreshModels, isLoading: isLoadingModels } = useModels();
+  const [selectedModelId, setSelectedModelId] = useState<string | null>(null);
 
   const handleConfirmDelete = (model: Model) => {
     return confirmAlert({
@@ -29,6 +31,12 @@ export default function Models() {
       },
     });
   };
+
+  useEffect(() => {
+    if (models.length > 0) {
+      setSelectedModelId(models[0].id);
+    }
+  }, [models]);
 
   const renderListActions = () => (
     <ActionPanel>
@@ -65,7 +73,13 @@ export default function Models() {
   );
 
   return (
-    <List isLoading={isLoadingModels} isShowingDetail={models.length !== 0} actions={renderListActions()}>
+    <List
+      key={selectedModelId}
+      isLoading={isLoadingModels}
+      isShowingDetail={models.length !== 0}
+      selectedItemId={selectedModelId ?? undefined}
+      actions={renderListActions()}
+    >
       {models.length === 0 ? (
         <List.EmptyView
           icon={{ source: "no-conversations.jpeg", mask: Image.Mask.RoundedRectangle }}
