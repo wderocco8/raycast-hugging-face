@@ -50,18 +50,25 @@ export function useQuestions() {
   );
 
   // TODO: fix to align with `add`
-  const update = useCallback(async (question: Question) => {
-    const toast = await showToast({
-      title: "Updating question...",
-      style: Toast.Style.Animated,
-    });
+  const update = useCallback(async (question: Question, hideToast?: boolean) => {
+    let toast;
+    if (!hideToast) {
+      toast = await showToast({
+        title: "Updating question...",
+        style: Toast.Style.Animated,
+      });
+    }
+
     setData((prev) => {
       const newData = prev.map((q) => (q.id === question.id ? question : q));
       saveToLocalStorage(newData);
       return newData;
     });
-    toast.title = "Question updated!";
-    toast.style = Toast.Style.Success;
+
+    if (!hideToast && toast) {
+      toast.title = "Question updated!";
+      toast.style = Toast.Style.Success;
+    }
   }, []);
 
   // TODO: fix to align with `add`

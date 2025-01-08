@@ -14,7 +14,7 @@ const defaultModel = "meta-llama/Meta-Llama-3-8B-Instruct";
 export async function generateResponse(
   questions: Question[],
   questionId: string,
-  setOutput: React.Dispatch<React.SetStateAction<string>>,
+  handleStreamingOutput: (output: string) => void,
   model?: Model,
 ): Promise<string | false> {
   try {
@@ -80,7 +80,7 @@ export async function generateResponse(
 
               if ("content" in delta) {
                 output += delta.content;
-                setOutput(output);
+                handleStreamingOutput(output);
               }
             } catch (e) {
               console.error("Error parsing JSON:", e);

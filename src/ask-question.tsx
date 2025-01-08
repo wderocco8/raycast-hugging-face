@@ -115,7 +115,18 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }));
 
     try {
-      const response = await generateResponse(allQuestions, question.id, setOutput, model ?? undefined);
+      const handleStreamingOutput = (output: string) => {
+        setOutput(output);
+
+        // Save progress to the question object
+        updateQuestion({
+          ...searchQuestion,
+          response: output,
+          isStreaming: true, // Keep streaming flag until finalized
+        }, true);
+      };
+
+      const response = await generateResponse(allQuestions, question.id, handleStreamingOutput, model ?? undefined);
       if (response) {
         // Update with finalized response
         await updateQuestion({ ...question, response, isStreaming: false });
@@ -172,10 +183,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         <List.Item.Detail.Metadata.Separator />
         <List.Item.Detail.Metadata.TagList title="Model">
           {isDefaultModel ? (
-            <List.Item.Detail.Metadata.TagList.Item
-              text={"Default"}
-              color={Color.SecondaryText}
-            />
+            <List.Item.Detail.Metadata.TagList.Item text={"Default"} color={Color.SecondaryText} />
           ) : (
             <List.Item.Detail.Metadata.TagList.Item
               text={models.find((m) => m.id === question.modelId)?.name}
