@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "hugging-face-inference-api",
+  "name": "hugging-face-ai",
   "title": "Hugging Face AI",
   "description": "This extension allows you to directly interace with the Hugging Face Inference API. All you need is a free access token!",
   "icon": "extension-icon.svg",
@@ -44,7 +44,6 @@
     "@huggingface/inference": "^2.8.1",
     "@raycast/api": "^1.88.4",
     "@raycast/utils": "^1.17.0",
-    "cross-fetch": "^4.1.0",
     "node-fetch": "^3.3.2",
     "uuid": "^11.0.3"
   },
