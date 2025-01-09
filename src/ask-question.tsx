@@ -215,6 +215,8 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             />
           )}
         </List.Item.Detail.Metadata.TagList>
+        <List.Item.Detail.Metadata.Separator />
+        <List.Item.Detail.Metadata.Label title="Response Word Count" text={question.response.trim().split(/\s+/).length.toString()} />
       </List.Item.Detail.Metadata>
     );
   };
