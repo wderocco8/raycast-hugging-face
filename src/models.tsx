@@ -64,6 +64,15 @@ export default function Models() {
         }
       />
       <Action
+        title="Update Model"
+        shortcut={Keyboard.Shortcut.Common.Edit}
+        onAction={() =>
+          push(<ModelForm modelId={model.id} />, async () => {
+            await refreshModels();
+          })
+        }
+      />
+      <Action
         title="Delete Conversation"
         style={Action.Style.Destructive}
         shortcut={Keyboard.Shortcut.Common.Remove}

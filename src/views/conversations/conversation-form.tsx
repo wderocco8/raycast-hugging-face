@@ -52,8 +52,6 @@ export default function ConversationForm({ conversationId }: ConversationFormPro
         reset({
           title: conversation.title,
         });
-      } else {
-        // TODO: handle errors if conversation is `undefined`
       }
 
       setIsLoading(false);

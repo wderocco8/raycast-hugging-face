@@ -52,14 +52,14 @@ export function useModels() {
   );
 
   const update = useCallback(
-    async (id: string, modelName: string, prompt: string) => {
+    async (id: string, name: string, prompt: string, model: string) => {
       setLoading(true);
       const toast = await showToast({
         title: "Updating model...",
         style: Toast.Style.Animated,
       });
 
-      const newData = data.map((m) => (m.id === id ? { ...m, modelName, prompt } : m));
+      const newData = data.map((m) => (m.id === id ? { ...m, name, prompt, model } : m));
       await saveToLocalStorage(newData);
       setData(newData);
 

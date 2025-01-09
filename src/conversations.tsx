@@ -66,16 +66,6 @@ ${questionsList}
         title="Open Conversation"
         onAction={() =>
           push(<AskQuestion conversationId={conversation.id} />, async () => {
-            await refresh(); // Refresh question-enriched conversations
-            setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
-          })
-        }
-      />
-      <Action
-        title="Update Conversation"
-        shortcut={Keyboard.Shortcut.Common.Edit}
-        onAction={() =>
-          push(<ConversationForm conversationId={conversation.id} />, async () => {
             await refresh();
             setUpdateKey((prev) => prev + 1);
           })
@@ -86,8 +76,18 @@ ${questionsList}
         shortcut={Keyboard.Shortcut.Common.New}
         onAction={() =>
           push(<AskQuestion />, async () => {
-            await refresh(); // Refresh question-enriched conversations
-            setUpdateKey((prev) => prev + 1); // Suposedly this force re-renders the List (can't tell tbh)
+            await refresh();
+            setUpdateKey((prev) => prev + 1);
+          })
+        }
+      />
+      <Action
+        title="Update Conversation"
+        shortcut={Keyboard.Shortcut.Common.Edit}
+        onAction={() =>
+          push(<ConversationForm conversationId={conversation.id} />, async () => {
+            await refresh();
+            setUpdateKey((prev) => prev + 1);
           })
         }
       />
@@ -119,7 +119,7 @@ ${questionsList}
             key={conversation.id}
             id={conversation.id}
             title={conversation.title}
-            accessories={[{ text: formatRelativeTime(conversation.createdAt) }]} // TODO: maybe remove?
+            accessories={[{ text: formatRelativeTime(conversation.createdAt) }]} // TODO: maybe remove? (I kinda like though tbh)
             detail={
               <List.Item.Detail
                 isLoading={isLoadingConversations}
