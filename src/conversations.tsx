@@ -16,11 +16,19 @@ export default function Conversations() {
   const { push } = useNavigation();
   const [updateKey, setUpdateKey] = useState(0);
 
-  // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
-  const markdown = (conversation: Conversation) =>
-    `
-  **Description:** [AI summary of convo -> based on first question]
-  `.trim();
+  const markdown = (conversation: Conversation) => {
+    const questionsList =
+      conversation.questions && conversation.questions.length > 0
+        ? conversation.questions.map((q) => `- ${q.prompt}`).join("\n")
+        : "- none";
+
+    // Important: ensure template string is un-nested to avoid indentation errors
+    return `
+### Recent Questions
+
+${questionsList}
+    `.trim();
+  };
 
   const handleConfirmDelete = (conversation: Conversation) => {
     return confirmAlert({
@@ -127,11 +135,6 @@ export default function Conversations() {
                       title="Question Count"
                       text={conversation.questions?.length.toString() ?? "0"}
                     />
-                    <List.Item.Detail.Metadata.Separator />
-                    <List.Item.Detail.Metadata.Label title="Recent Questions" />
-                    {conversation.questions?.map((q) => (
-                      <List.Item.Detail.Metadata.Label title={`Q: ${q.prompt}`} key={q.id} />
-                    ))}
                   </List.Item.Detail.Metadata>
                 }
               />

@@ -3,7 +3,7 @@
 import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
 import fetch from "node-fetch";
-import { StreamedToken } from "../types/hugging-face";
+import { NonStreamedToken, StreamedToken } from "../types/hugging-face";
 import { Question } from "../types/question";
 import { Model } from "../types/model";
 
@@ -121,21 +121,19 @@ export async function generateResponse(prompt: string): Promise<string | false> 
       }),
     });
 
-    console.log("generateResponse", response.body);
-
     if (!response.ok) {
       const errorText = await response.text();
       console.error("Server responded with error:", errorText);
       throw new Error(errorText);
     }
 
-    // Convert the response to a ReadableStream
-    const stream = response.body;
-    if (!stream) {
+    const responseData = (await response.json()) as NonStreamedToken;
+    const message = responseData.choices[0].message;
+    if ("content" in message) {
+      return message.content;
+    } else {
       return false;
     }
-
-    return new Promise((resolve, reject) => {});
   } catch (error) {
     console.error("Error generating response:", error);
     throw error;

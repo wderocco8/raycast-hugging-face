@@ -5,4 +5,5 @@ export interface Conversation {
   title: string;
   createdAt: string;
   questions?: Question[];
+  description?: string; // TODO: maybe implement this (was planning to use AI, but it seems a bit finicky)
 }

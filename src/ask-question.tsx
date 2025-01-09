@@ -20,7 +20,7 @@ import {
   Image,
   Color,
 } from "@raycast/api";
-import { generateResponse, generateStreamedResponse } from "./api/hugging-face";
+import { generateStreamedResponse } from "./api/hugging-face";
 import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
@@ -49,6 +49,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
   const [output, setOutput] = useState<string>("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
   const [isAskingQuestion, setIsAskingQuestion] = useState<boolean>(false);
+  const [isFirstQuestion, setIsFirstQuestion] = useState<boolean>(!conversationId); // If conversation NOT provided, then this is the first question
   const [isShowingMetaData, setIsShowingMetadata] = useState<boolean>(true);
   const { add: addConversation } = useConversations();
   const {
@@ -82,7 +83,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }
 
     // Create new conversation if first question
-    if (questions.length === 0) {
+    if (isFirstQuestion) {
       await addConversation({
         id: conversationId ?? question.conversationId,
         title: "Untitled Conversation",
@@ -91,7 +92,6 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }
 
     // TODO: genereate conversation description
-    generateResponse("what is 1 + 4");
 
     // Clear output, stop showing ActionPanel, and creat new AbortController
     setOutput("");
@@ -162,6 +162,9 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     } finally {
       setIsAskingQuestion(false);
       setAbortController(null);
+      if (isFirstQuestion) {
+        setIsFirstQuestion(false);
+      }
     }
   };
 
