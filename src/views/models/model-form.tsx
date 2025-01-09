@@ -10,8 +10,8 @@ interface ModelFormFormValues {
   prompt: string;
   model: string;
 }
-
-const inferenceModels = ["meta-llama/Meta-Llama-3-8B-Instruct", "Qwen/QwQ-32B-Preview", "Qwen/Qwen2.5-72B-Instruct"];
+const DEAFULT_MODEL = "meta-llama/Meta-Llama-3-8B-Instruct";
+const inferenceModels = [DEAFULT_MODEL, "Qwen/QwQ-32B-Preview", "Qwen/Qwen2.5-72B-Instruct"];
 
 interface ModelFormProps {
   modelId?: string;
@@ -44,20 +44,19 @@ export default function ModelForm({ modelId }: ModelFormProps) {
       pop();
       setIsLoading(false);
     },
-    initialValues:
-      modelId
-        ? undefined
-        : {
-            prompt: "You are a helpful assistant.",
-            model: "meta-llama/Meta-Llama-3-8B-Instruct",
-          },
+    initialValues: modelId
+      ? undefined
+      : {
+          prompt: "You are a helpful assistant.",
+          model: DEAFULT_MODEL,
+        },
     validation: {
       prompt: FormValidation.Required,
       model: FormValidation.Required,
     },
   });
 
-  // Single useEffect to handle initialization
+  // Handle initialization when modelId is provided
   useEffect(() => {
     if (isLoadingModels) {
       return;
@@ -81,10 +80,6 @@ export default function ModelForm({ modelId }: ModelFormProps) {
     initializeForm();
   }, [isLoadingModels, modelId, models, reset]);
 
-  useEffect(() => {
-    console.log("Form values after reset", itemProps.model.value);
-  }, [itemProps.model.value]);
-
   return (
     <Form
       isLoading={isLoading}
@@ -96,7 +91,11 @@ export default function ModelForm({ modelId }: ModelFormProps) {
     >
       <Form.TextField title="Name" placeholder="Enter a custom name (optional)..." {...itemProps.name} />
       <Form.TextArea title="Prompt" placeholder="Enter a custom prompt..." {...itemProps.prompt} />
-      <Form.Dropdown title="Model" {...itemProps.model} info="To find more models, go to...">
+      <Form.Dropdown
+        title="Model"
+        {...itemProps.model}
+        info={`DISCLAIMER: When updating models, this dropdown may not match the previous value. This is an active bug being worked on.\n\nIn the meantime, be sure to select the same model the was previously selected in order to save the state.\n\nApologies for any inconvenience.`}
+      >
         {inferenceModels.map((model, index) => (
           <Form.Dropdown.Item key={index} value={model} title={model} />
         ))}
