@@ -17,10 +17,10 @@ export default function Conversations() {
   const [updateKey, setUpdateKey] = useState(0);
 
   // TODO: maybe add description of conversation? (would be cool if it were AI generated...)
-  // const markdown = (conversation: Conversation) =>
-  //   `
-  // **Description:** [AI summary of convo -> based on first question]
-  // `.trim();
+  const markdown = (conversation: Conversation) =>
+    `
+  **Description:** [AI summary of convo -> based on first question]
+  `.trim();
 
   const handleConfirmDelete = (conversation: Conversation) => {
     return confirmAlert({
@@ -115,7 +115,7 @@ export default function Conversations() {
             detail={
               <List.Item.Detail
                 isLoading={isLoadingConversations}
-                // markdown={markdown(conversation)}
+                markdown={markdown(conversation)}
                 metadata={
                   <List.Item.Detail.Metadata>
                     <List.Item.Detail.Metadata.Label title="Conversation Title" text={conversation.title} />

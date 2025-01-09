@@ -20,7 +20,7 @@ import {
   Image,
   Color,
 } from "@raycast/api";
-import { generateResponse } from "./api/hugging-face";
+import { generateResponse, generateStreamedResponse } from "./api/hugging-face";
 import { useConversations } from "./hooks/useConversations";
 import { useQuestions } from "./hooks/useQuestions";
 import { v4 as uuidv4 } from "uuid";
@@ -90,6 +90,9 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       });
     }
 
+    // TODO: genereate conversation description
+    generateResponse("what is 1 + 4");
+
     // Clear output, stop showing ActionPanel, and creat new AbortController
     setOutput("");
     setIsAskingQuestion(true);
@@ -132,7 +135,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         );
       };
 
-      const response = await generateResponse(
+      const response = await generateStreamedResponse(
         allQuestions,
         question.id,
         handleStreamingOutput,
@@ -216,7 +219,10 @@ export default function AskQuestion({ conversationId }: ChatProps) {
           )}
         </List.Item.Detail.Metadata.TagList>
         <List.Item.Detail.Metadata.Separator />
-        <List.Item.Detail.Metadata.Label title="Response Word Count" text={question.response.trim().split(/\s+/).length.toString()} />
+        <List.Item.Detail.Metadata.Label
+          title="Response Word Count"
+          text={question.response.trim().split(/\s+/).length.toString()}
+        />
       </List.Item.Detail.Metadata>
     );
   };

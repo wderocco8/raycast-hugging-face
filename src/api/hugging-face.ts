@@ -1,4 +1,4 @@
-// docs: https://huggingface.co/docs/huggingface.js/en/inference/README#text-generation-chat-completion-api-compatible
+// Documentation: https://huggingface.co/docs/api-inference/tasks/chat-completion
 
 import { getPreferenceValues } from "@raycast/api";
 import { ChatPreferences } from "../types/preferences";
@@ -11,7 +11,7 @@ const preferences = getPreferenceValues<ChatPreferences>();
 
 const defaultModel = "meta-llama/Meta-Llama-3-8B-Instruct";
 
-export async function generateResponse(
+export async function generateStreamedResponse(
   questions: Question[],
   questionId: string,
   handleStreamingOutput: (output: string) => void,
@@ -99,6 +99,43 @@ export async function generateResponse(
         reject(err);
       });
     });
+  } catch (error) {
+    console.error("Error generating response:", error);
+    throw error;
+  }
+}
+
+export async function generateResponse(prompt: string): Promise<string | false> {
+  try {
+    const response = await fetch(`https://api-inference.huggingface.co/models/${defaultModel}/v1/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${preferences.access_token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: defaultModel,
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 100,
+        stream: false,
+      }),
+    });
+
+    console.log("generateResponse", response.body);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Server responded with error:", errorText);
+      throw new Error(errorText);
+    }
+
+    // Convert the response to a ReadableStream
+    const stream = response.body;
+    if (!stream) {
+      return false;
+    }
+
+    return new Promise((resolve, reject) => {});
   } catch (error) {
     console.error("Error generating response:", error);
     throw error;
