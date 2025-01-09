@@ -187,7 +187,8 @@ export default function AskQuestion({ conversationId }: ChatProps) {
 
   const handleStopResponse = () => {
     if (abortController) {
-      abortController.abort(); // Abort generateResponse stream
+      abortController.abort(); // Abort generateResponse stream (then reset controller for next question)
+      setAbortController(null);
       showToast({
         style: Toast.Style.Failure,
         title: "Response stopped.",
