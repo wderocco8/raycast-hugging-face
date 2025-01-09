@@ -64,6 +64,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
   const [model, setModel] = useState<Model | null>(null);
   const defaultModel = { id: "default", name: "Default" } as const;
   const allModels: ModelSelection[] = [defaultModel, ...models];
+  const [abortController, setAbortController] = useState<AbortController | null>(null);
 
   const handleAskQuestion = async (question: Question) => {
     if (!question.prompt) {
@@ -89,9 +90,11 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       });
     }
 
-    // Clear output and stop showing ActionPanel
+    // Clear output, stop showing ActionPanel, and creat new AbortController
     setOutput("");
     setIsAskingQuestion(true);
+    const abortController = new AbortController();
+    setAbortController(abortController);
 
     // Take snapshot of questions (for generateResponse) and add new question
     const allQuestions = [...questions, question];
@@ -119,14 +122,23 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         setOutput(output);
 
         // Save progress to the question object
-        updateQuestion({
-          ...searchQuestion,
-          response: output,
-          isStreaming: true, // Keep streaming flag until finalized
-        }, true);
+        updateQuestion(
+          {
+            ...searchQuestion,
+            response: output,
+            isStreaming: true, // Keep streaming flag until finalized
+          },
+          true,
+        );
       };
 
-      const response = await generateResponse(allQuestions, question.id, handleStreamingOutput, model ?? undefined);
+      const response = await generateResponse(
+        allQuestions,
+        question.id,
+        handleStreamingOutput,
+        model ?? undefined,
+        abortController.signal,
+      );
       if (response) {
         // Update with finalized response
         await updateQuestion({ ...question, response, isStreaming: false });
@@ -146,6 +158,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       });
     } finally {
       setIsAskingQuestion(false);
+      setAbortController(null);
     }
   };
 
@@ -172,6 +185,16 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     }
   };
 
+  const handleStopResponse = () => {
+    if (abortController) {
+      abortController.abort(); // Abort generateResponse stream
+      showToast({
+        style: Toast.Style.Failure,
+        title: "Response stopped.",
+      });
+    }
+  };
+
   const renderMetaData = (question: Question) => {
     const model = models.find((m) => m.id === question.modelId)?.name;
     const isDefaultModel = !model;
@@ -195,7 +218,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     );
   };
 
-  const renderActions = (question?: Question) =>
+  const renderListActions = () =>
     !isAskingQuestion && (
       <ActionPanel>
         <ActionPanel.Section>
@@ -224,22 +247,59 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             onAction={() => setIsShowingMetadata((prev) => !prev)}
           />
         </ActionPanel.Section>
+      </ActionPanel>
+    );
+
+  const renderItemActions = (question: Question) =>
+    !isAskingQuestion ? (
+      <ActionPanel>
+        <ActionPanel.Section>
+          {isValidQuestionPrompt(searchQuestion.prompt) && (
+            <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
+          )}
+          <Action
+            title="Rich Text Question"
+            shortcut={{ modifiers: ["cmd"], key: "t" }}
+            onAction={() =>
+              push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
+            }
+          />
+          <Action
+            title="New Conversation"
+            shortcut={Keyboard.Shortcut.Common.New}
+            onAction={() =>
+              push(<AskQuestion />, async () => {
+                await refreshQuestions();
+              })
+            }
+          />
+          <Action
+            title="Toggle Metadata"
+            shortcut={{ modifiers: ["cmd"], key: "m" }}
+            onAction={() => setIsShowingMetadata((prev) => !prev)}
+          />
+        </ActionPanel.Section>
         {/* ListItem-specific */}
-        {question && (
-          <>
-            <ActionPanel.Section>
-              <Action.CopyToClipboard content={question.response} shortcut={Keyboard.Shortcut.Common.Copy} />
-            </ActionPanel.Section>
-            <ActionPanel.Section>
-              <Action
-                title="Delete Question"
-                style={Action.Style.Destructive}
-                shortcut={Keyboard.Shortcut.Common.Remove}
-                onAction={() => handleConfirmDelete(question)}
-              />
-            </ActionPanel.Section>
-          </>
-        )}
+        <ActionPanel.Section>
+          <Action.CopyToClipboard content={question.response} shortcut={Keyboard.Shortcut.Common.Copy} />
+        </ActionPanel.Section>
+        <ActionPanel.Section>
+          <Action
+            title="Delete Question"
+            style={Action.Style.Destructive}
+            shortcut={Keyboard.Shortcut.Common.Remove}
+            onAction={() => handleConfirmDelete(question)}
+          />
+        </ActionPanel.Section>
+      </ActionPanel>
+    ) : (
+      <ActionPanel>
+        <Action title="Stop Response" shortcut={{ modifiers: ["cmd"], key: "." }} onAction={handleStopResponse} />
+        <Action
+          title="Toggle Metadata"
+          shortcut={{ modifiers: ["cmd"], key: "m" }}
+          onAction={() => setIsShowingMetadata((prev) => !prev)}
+        />
       </ActionPanel>
     );
 
@@ -270,7 +330,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       selectedItemId={selectedQuestionId ?? undefined}
       // TODO: this might be an issue with Raycast itself (another extension had the same error https://github.com/raycast/extensions/issues/10844)
       // onSelectionChange causes race condition :..(
-      actions={renderActions()}
+      actions={renderListActions()}
     >
       {questions.length === 0 ? (
         <List.EmptyView
@@ -291,7 +351,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
                 metadata={isShowingMetaData && renderMetaData(question)}
               />
             }
-            actions={renderActions(question)}
+            actions={renderItemActions(question)}
           />
         ))
       )}

@@ -16,6 +16,7 @@ export async function generateResponse(
   questionId: string,
   handleStreamingOutput: (output: string) => void,
   model?: Model,
+  abortSignal?: AbortSignal,
 ): Promise<string | false> {
   try {
     const lastIndex = questions.map((q) => q.id).indexOf(questionId);
@@ -39,6 +40,7 @@ export async function generateResponse(
           max_tokens: 500,
           stream: true,
         }),
+        signal: abortSignal,
       },
     );
 
