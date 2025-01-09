@@ -96,8 +96,8 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     const abortController = new AbortController();
     setAbortController(abortController);
 
-    // Take snapshot of questions (for generateResponse) and add new question
-    const allQuestions = [...questions, question];
+    // Take snapshot of questions (for generateResponse) and add new question (allQuestions stored in opposite order in useQuestions)
+    const allQuestions = [question, ...questions].reverse();
     await addQuestion(question);
 
     // Select the asked question
