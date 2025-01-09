@@ -30,7 +30,13 @@ export default function ModelForm({ modelId }: ModelFormProps) {
       setIsLoading(true);
 
       if (modelId && model) {
-        await update(model.id, values.name, values.prompt, values.model);
+        // await update(model.id, values.name, values.prompt, values.model);
+        await update({
+          ...model,
+          name: values.name,
+          prompt: values.prompt,
+          model: values.model,
+        });
       } else {
         await add({
           id: uuidv4(),
