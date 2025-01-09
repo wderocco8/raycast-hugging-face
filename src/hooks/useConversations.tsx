@@ -68,14 +68,14 @@ export function useConversations() {
   );
 
   const update = useCallback(
-    async (id: string, title: string) => {
+    async (conversation: Conversation) => {
       setLoading(true);
       const toast = await showToast({
         title: "Updating Conversation...",
         style: Toast.Style.Animated,
       });
 
-      const newData = data.map((c) => (c.id === id ? { ...c, title } : c));
+      const newData = data.map((c) => (c.id === conversation.id ? conversation : c));
       await saveToLocalStorage(newData);
       setData(newData);
 

@@ -24,7 +24,7 @@ export default function ConversationForm({ conversationId }: ConversationFormPro
       setIsLoading(true);
       try {
         if (conversation) {
-          await updateConversation(conversationId, values.title);
+          await updateConversation({ ...conversation, title: values.title });
         }
         // Pop form from stack (navigating to conversations)
         pop();

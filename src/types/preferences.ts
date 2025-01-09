@@ -1,3 +1,3 @@
 export interface ChatPreferences {
-  access_token: string
+  access_token: string;
 }

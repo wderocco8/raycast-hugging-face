@@ -20,7 +20,7 @@ export default function Conversations() {
     const questionsList =
       conversation.questions && conversation.questions.length > 0
         ? conversation.questions.map((q) => `- ${q.prompt}`).join("\n")
-        : "- none";
+        : "*No questions yet...*";
 
     // Important: ensure template string is un-nested to avoid indentation errors
     return `
