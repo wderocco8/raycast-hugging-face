@@ -3,7 +3,7 @@
   "name": "hugging-face-inference-api",
   "title": "Hugging Face AI",
   "description": "This extension allows you to directly interace with the Hugging Face Inference API. All you need is a free access token!",
-  "icon": "extension-icon.png",
+  "icon": "extension-icon.svg",
   "author": "william_de_rocco",
   "categories": [
     "Developer Tools",
