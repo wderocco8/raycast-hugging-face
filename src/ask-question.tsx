@@ -91,7 +91,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       });
     }
 
-    // TODO: genereate conversation description
+    // TODO: genereate conversation description (MAYBE)
 
     // Clear output, stop showing ActionPanel, and creat new AbortController
     setOutput("");
