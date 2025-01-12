@@ -16,7 +16,7 @@ export default function ExportData() {
         <ActionPanel>
           <Action.SubmitForm
             title="Export"
-            onSubmit={(values: { folders: string[] }) => {
+            onSubmit={async (values: { folders: string[] }) => {
               const folder = values.folders[0];
               try {
                 if (!folder) {
@@ -29,12 +29,13 @@ export default function ExportData() {
                 }
 
                 // Write LocalStorage items to the JSON file
-                exportToFile(folder);
+                return await exportToFile(folder);
               } catch (error) {
                 console.error("Error", error);
                 if (error instanceof Error) {
                   showToast({ style: Toast.Style.Failure, title: "Error", message: error.message });
                 }
+                return false;
               }
             }}
           />

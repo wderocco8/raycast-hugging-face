@@ -29,5 +29,6 @@ export const exportToFile = async (outputFolder: string, fileName: string = "hug
     if (error instanceof Error) {
       showToast({ style: Toast.Style.Failure, title: "Failed to export file", message: error.message });
     }
+    return false;
   }
 };
