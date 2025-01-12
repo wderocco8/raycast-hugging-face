@@ -26,7 +26,7 @@ export default function ExportData() {
 
                 exportToFile(folder);
               } catch (error) {
-                console.error("Failed to export file", error);
+                console.error("Error", error);
                 if (error instanceof Error) {
                   showToast({ style: Toast.Style.Failure, title: "Error", message: error.message });
                 }

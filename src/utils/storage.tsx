@@ -1,4 +1,4 @@
-import { LocalStorage, showToast, Toast } from "@raycast/api";
+import { LocalStorage, showInFinder, showToast, Toast } from "@raycast/api";
 import fs from "fs";
 import path from "path";
 
@@ -23,6 +23,7 @@ export const exportToFile = async (outputFolder: string, fileName: string = "hug
     const filePath = path.join(outputFolder, fileName);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
     showToast({ style: Toast.Style.Success, title: "Success", message: `Stored data in "${fileName}"` });
+    showInFinder(filePath);
   } catch (error) {
     console.error("Failed to export file", error);
     if (error instanceof Error) {
