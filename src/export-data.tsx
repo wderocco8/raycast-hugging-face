@@ -15,15 +15,20 @@ export default function ExportData() {
       actions={
         <ActionPanel>
           <Action.SubmitForm
-            title="Submit Name"
+            title="Export"
             onSubmit={(values: { folders: string[] }) => {
               const folder = values.folders[0];
               try {
+                if (!folder) {
+                  throw new Error("No folder selected.");
+                }
+
                 // Ensure the folder exists
                 if (!fs.existsSync(folder) || !fs.lstatSync(folder).isDirectory()) {
                   throw new Error("The selected folder is invalid or does not exist.");
                 }
 
+                // Write LocalStorage items to the JSON file
                 exportToFile(folder);
               } catch (error) {
                 console.error("Error", error);
