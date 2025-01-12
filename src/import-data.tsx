@@ -7,6 +7,7 @@
 
 import { Action, ActionPanel, Form, showToast, Toast } from "@raycast/api";
 import fs from "fs";
+import path from "path";
 
 export default function ImportData() {
   return (
@@ -24,6 +25,13 @@ export default function ImportData() {
 
                 if (!fs.existsSync(file) || !fs.lstatSync(file).isFile()) {
                   throw new Error("The selected file is invalid or does not exist.");
+                }
+
+                // Validate file type (e.g., only allow .json files)
+                const allowedExtensions = [".json"];
+                const fileExtension = path.extname(file);
+                if (!allowedExtensions.includes(fileExtension)) {
+                  throw new Error(`Invalid file type. Please select a ${allowedExtensions.join(",")} file.`);
                 }
 
                 console.log(file);
