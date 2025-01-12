@@ -31,10 +31,9 @@ export const exportToFile = async (outputFolder: string, fileName: string = "hug
     showToast({ style: Toast.Style.Success, title: "Success", message: `Stored data in "${fileName}"` });
     showInFinder(filePath);
   } catch (error) {
-    console.error("Failed to export file", error);
-    if (error instanceof Error) {
-      showToast({ style: Toast.Style.Failure, title: "Failed to export file", message: error.message });
-    }
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred.";
+    console.error("Error", errorMessage);
+    showToast({ style: Toast.Style.Failure, title: "Error", message: errorMessage });
     return false;
   }
 };
@@ -59,10 +58,9 @@ export const importFromFile = async (filePath: string) => {
     showToast({ style: Toast.Style.Success, title: "Success", message: "Imported data to LocalStorage" });
     popToRoot();
   } catch (error) {
-    console.error("Failed to import data", error);
-    if (error instanceof Error) {
-      showToast({ style: Toast.Style.Failure, title: "Failed to import data", message: error.message });
-    }
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred.";
+    console.error("Error", errorMessage);
+    showToast({ style: Toast.Style.Failure, title: "Error", message: errorMessage });
     return false;
   }
 };
