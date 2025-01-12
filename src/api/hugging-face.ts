@@ -107,7 +107,10 @@ export async function generateStreamedResponse(
     if (error instanceof Error) {
       const parsedError = JSON.parse(error.message);
 
-      if ("error" in parsedError && parsedError.error === "Authorization header is correct, but the token seems invalid") {
+      if (
+        "error" in parsedError &&
+        parsedError.error === "Authorization header is correct, but the token seems invalid"
+      ) {
         throw new Error("Invalid Token");
       }
 

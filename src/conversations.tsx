@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Alert, confirmAlert, Keyboard, List, useNavigation, Image } from "@raycast/api";
+import { Action, ActionPanel, Alert, confirmAlert, Keyboard, List, useNavigation } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
 import AskQuestion from "./ask-question";

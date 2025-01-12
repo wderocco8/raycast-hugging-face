@@ -17,7 +17,6 @@ import {
   showToast,
   Toast,
   useNavigation,
-  Image,
   Color,
 } from "@raycast/api";
 import { generateStreamedResponse } from "./api/hugging-face";
