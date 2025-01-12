@@ -109,11 +109,7 @@ ${questionsList}
       searchBarPlaceholder="Search conversations..."
     >
       {conversations.length === 0 ? (
-        <List.EmptyView
-          icon={{ source: "no-conversations.png", mask: Image.Mask.RoundedRectangle }}
-          title="No conversations yet"
-          description="Start making conversations with your AI wizard 🧙‍♂️"
-        />
+        <List.EmptyView title="No conversations yet" description="Start making conversations with your AI wizard 🧙‍♂️" />
       ) : (
         conversations.map((conversation) => (
           <List.Item

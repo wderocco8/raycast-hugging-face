@@ -342,11 +342,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       actions={renderListActions()}
     >
       {questions.length === 0 ? (
-        <List.EmptyView
-          icon={{ source: "no-questions.png", mask: Image.Mask.RoundedRectangle }}
-          title="No questions yet"
-          description="Get your questions answered with the power of AI 🧙‍♂️"
-        />
+        <List.EmptyView title="No questions yet" description="Get your questions answered with the power of AI 🧙‍♂️" />
       ) : (
         questions.map((question) => (
           <List.Item

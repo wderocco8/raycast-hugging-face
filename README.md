@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Hugging Face AI** extension for Raycast allows users to interact with the Hugging Face Inference API seamlessly. With features like asking questions, tracking conversations, creating custom models, and exporting/importing data, this extension is a powerful tool for developers and AI enthusiasts. **All you need is a free access token!**
+The **Hugging Face AI** extension for Raycast allows users to interact with the Hugging Face Inference API seamlessly. With features like asking questions, tracking conversations, creating custom models, and exporting/importing data, this extension is a powerful tool for developers and AI enthusiasts. **All you need is a _free_ access token!**
 
 ![Extension Commands](media/extension-commands.png)
 
@@ -32,32 +32,13 @@ To use the extension, you need to configure your Hugging Face API token:
 
 1. Log in to your Hugging Face account.
 2. Navigate to [Hugging Face Tokens](https://huggingface.co/settings/tokens).
-3. Click ****Create new token****
+3. Click **Create new token**
 4. Enter a name (optional)
-5. Select the checkbox ****Make calls to the serverless Inference API**** under ****Inference****
-6. Scroll down and click ****Create token****
+5. Select the checkbox **Make calls to the serverless Inference API** under **Inference**
+6. Scroll down and click **Create token**
 7. Copy your newly created access token.
 8. Open the Hugging Face AI extension in Raycast.
 9. Paste the token into the **Access Token** field in the preferences.
-
-<!-- ## How to Use
-
-1. **Ask a Question**:
-
-   - Open Raycast and type `Ask Question`.
-   - Enter your query and hit `Enter`.
-   - The response will appear instantly.
-
-2. **Manage Conversations**:
-
-   - Open the `Conversations` command to review past chats.
-
-3. **Custom Models**:
-
-   - Use the `Models` command to create or modify your custom AI models.
-
-4. **Import/Export Data**:
-   - Use the `Import Data` or `Export Data` commands to backup or restore your data. -->
 
 ## Screenshots
 
@@ -75,13 +56,11 @@ The extension requires the following packages:
 - `node-fetch`
 - `uuid`
 
-## Icon Attributions
+## Attibutions
 
-<a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by sonnycandra - Flaticon</a>
+This extension was made from scratch, but was inspired by the [ChatGPT extension](https://www.raycast.com/abielzulio/chatgpt) by [Abiel Zulio M](https://www.raycast.com/abielzulio). While these extensions are similar, Hugging Face AI is designed to be **free** since it utilizes a variety of unpaid models from Hugging Face's [Inference API](https://huggingface.co/learn/cookbook/en/enterprise_cookbook_overview#inference-api-serverless).
 
-<a href="https://www.flaticon.com/free-icons/conversation" title="conversation icons">Conversation icons created by Queen Creations - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/knowledge-graph" title="knowledge graph icons">Knowledge graph icons created by Grafixpoint - Flaticon</a>
+Nonetheless, if you want access to the latest models with more powerful capabilities, I would recommend either subcribing to [Hugging Face Pro](https://huggingface.co/pricing) (more advanced/paid models will be supported in this extension ASAP), or to use Abiel's [ChatGPT extension](https://www.raycast.com/abielzulio/chatgpt)!
 
 ## License
 

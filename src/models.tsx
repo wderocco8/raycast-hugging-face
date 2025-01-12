@@ -91,11 +91,7 @@ export default function Models() {
       searchBarPlaceholder="Search models..."
     >
       {models.length === 0 ? (
-        <List.EmptyView
-          icon={{ source: "no-models.png", mask: Image.Mask.RoundedRectangle }}
-          title="No models yet"
-          description="Create models for personalized conversations 🌟"
-        />
+        <List.EmptyView title="No models yet" description="Create models for personalized conversations 🌟" />
       ) : (
         models.map((model) => (
           <List.Item
