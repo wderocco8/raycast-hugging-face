@@ -7,7 +7,8 @@
   "author": "william_de_rocco",
   "categories": [
     "Developer Tools",
-    "Productivity"
+    "Productivity",
+    "Web"
   ],
   "license": "MIT",
   "commands": [
@@ -27,6 +28,18 @@
       "name": "models",
       "title": "Models",
       "description": "View and create custom chat models.",
+      "mode": "view"
+    },
+    {
+      "name": "import-data",
+      "title": "Import Data",
+      "description": "Import data from json file.",
+      "mode": "view"
+    },
+    {
+      "name": "export-data",
+      "title": "Export Data",
+      "description": "Export data to json file.",
       "mode": "view"
     }
   ],
