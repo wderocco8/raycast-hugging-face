@@ -8,6 +8,7 @@
 import { Action, ActionPanel, Form, showToast, Toast } from "@raycast/api";
 import fs from "fs";
 import path from "path";
+import { importFromFile } from "./utils/storage";
 
 export default function ImportData() {
   return (
@@ -34,7 +35,7 @@ export default function ImportData() {
                   throw new Error(`Invalid file type. Please select a ${allowedExtensions.join(",")} file.`);
                 }
 
-                console.log(file);
+                return importFromFile(file);
               } catch (error) {
                 console.error("Error", error);
                 if (error instanceof Error) {
