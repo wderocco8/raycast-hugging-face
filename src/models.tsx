@@ -92,7 +92,7 @@ export default function Models() {
     >
       {models.length === 0 ? (
         <List.EmptyView
-          icon={{ source: "no-conversations.jpeg", mask: Image.Mask.RoundedRectangle }}
+          icon={{ source: "no-models.png", mask: Image.Mask.RoundedRectangle }}
           title="No models yet"
           description="Create models for personalized conversations 🌟"
         />

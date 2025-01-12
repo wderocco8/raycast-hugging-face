@@ -343,7 +343,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
     >
       {questions.length === 0 ? (
         <List.EmptyView
-          icon={{ source: "no-questions.jpeg", mask: Image.Mask.RoundedRectangle }}
+          icon={{ source: "no-questions.png", mask: Image.Mask.RoundedRectangle }}
           title="No questions yet"
           description="Get your questions answered with the power of AI 🧙‍♂️"
         />

@@ -110,7 +110,7 @@ ${questionsList}
     >
       {conversations.length === 0 ? (
         <List.EmptyView
-          icon={{ source: "no-conversations.jpeg", mask: Image.Mask.RoundedRectangle }}
+          icon={{ source: "no-conversations.png", mask: Image.Mask.RoundedRectangle }}
           title="No conversations yet"
           description="Start making conversations with your AI wizard 🧙‍♂️"
         />

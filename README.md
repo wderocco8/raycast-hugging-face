@@ -75,6 +75,14 @@ The extension requires the following packages:
 - `node-fetch`
 - `uuid`
 
+## Icon Attributions
+
+<a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by sonnycandra - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/conversation" title="conversation icons">Conversation icons created by Queen Creations - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/knowledge-graph" title="knowledge graph icons">Knowledge graph icons created by Grafixpoint - Flaticon</a>
+
 ## License
 
 This extension is licensed under the [MIT License](LICENSE).
