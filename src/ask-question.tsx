@@ -153,12 +153,9 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         console.error("Stream issue perhaps?");
       }
     } catch (error) {
-      console.error("Error generating response:", error);
-      showToast({
-        style: Toast.Style.Failure,
-        title: "Error",
-        message: "Failed to generate response. Please try again.",
-      });
+      const errorMessage = error instanceof Error ? error.message : "An unknown error occurred.";
+      console.error("Error", errorMessage);
+      showToast({ style: Toast.Style.Failure, title: "Error", message: errorMessage });
     } finally {
       setIsAskingQuestion(false);
       setAbortController(null);

@@ -51,7 +51,6 @@ export async function generateStreamedResponse(
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("Server responded with error:", errorText);
       throw new Error(errorText);
     }
 
@@ -105,6 +104,17 @@ export async function generateStreamedResponse(
       });
     });
   } catch (error) {
+    if (error instanceof Error) {
+      const parsedError = JSON.parse(error.message);
+
+      if ("error" in parsedError && parsedError.error === "Authorization header is correct, but the token seems invalid") {
+        throw new Error("Invalid Token");
+      }
+
+      if ("error" in parsedError) {
+        throw new Error(parsedError.error);
+      }
+    }
     console.error("Error generating response:", error);
     throw error;
   }
@@ -128,7 +138,6 @@ export async function generateResponse(prompt: string): Promise<string | false> 
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("Server responded with error:", errorText);
       throw new Error(errorText);
     }
 
@@ -140,6 +149,12 @@ export async function generateResponse(prompt: string): Promise<string | false> 
       return false;
     }
   } catch (error) {
+    if (error instanceof Error) {
+      const parsedError = JSON.parse(error.message);
+      if ("error" in parsedError) {
+        throw new Error(parsedError.error);
+      }
+    }
     console.error("Error generating response:", error);
     throw error;
   }
