@@ -88,6 +88,7 @@ export default function Models() {
       isShowingDetail={models.length !== 0}
       selectedItemId={selectedModelId ?? undefined}
       actions={renderListActions()}
+      searchBarPlaceholder="Search models..."
     >
       {models.length === 0 ? (
         <List.EmptyView

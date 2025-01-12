@@ -106,6 +106,7 @@ ${questionsList}
       isLoading={isLoadingConversations}
       key={updateKey}
       actions={renderListActions()}
+      searchBarPlaceholder="Search conversations..."
     >
       {conversations.length === 0 ? (
         <List.EmptyView
