@@ -20,10 +20,15 @@ export async function generateStreamedResponse(
 ): Promise<string | false> {
   try {
     const lastIndex = questions.map((q) => q.id).indexOf(questionId);
-    const filteredQuestions = questions.slice(0, lastIndex + 1);
+    const contextQuestions = questions.slice(0, lastIndex); // Previously answered questions
+    const newQuestion = questions[lastIndex]; // Latest question (not answered yet)
     const messages = [
       { role: "system", content: model?.prompt ?? "You are a helpful assistant." },
-      ...filteredQuestions.map((q) => ({ role: "user", content: q.prompt })),
+      ...contextQuestions.flatMap((q) => [
+        { role: "user", content: q.prompt },
+        { role: "assistant", content: q.response },
+      ]),
+      { role: "user", content: newQuestion.prompt },
     ];
 
     const response = await fetch(
