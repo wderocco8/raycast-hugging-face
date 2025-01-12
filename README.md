@@ -32,11 +32,15 @@ To use the extension, you need to configure your Hugging Face API token:
 
 1. Log in to your Hugging Face account.
 2. Navigate to [Hugging Face Tokens](https://huggingface.co/settings/tokens).
-3. Copy your access token.
-4. Open the Hugging Face AI extension in Raycast.
-5. Paste the token into the **Access Token** field in the preferences.
+3. Click ****Create new token****
+4. Enter a name (optional)
+5. Select the checkbox ****Make calls to the serverless Inference API**** under ****Inference****
+6. Scroll down and click ****Create token****
+7. Copy your newly created access token.
+8. Open the Hugging Face AI extension in Raycast.
+9. Paste the token into the **Access Token** field in the preferences.
 
-## How to Use
+<!-- ## How to Use
 
 1. **Ask a Question**:
 
@@ -53,7 +57,7 @@ To use the extension, you need to configure your Hugging Face API token:
    - Use the `Models` command to create or modify your custom AI models.
 
 4. **Import/Export Data**:
-   - Use the `Import Data` or `Export Data` commands to backup or restore your data.
+   - Use the `Import Data` or `Export Data` commands to backup or restore your data. -->
 
 ## Screenshots
 
