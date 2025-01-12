@@ -120,6 +120,7 @@ export async function generateStreamedResponse(
   }
 }
 
+// TODO: this function is not actively in use, but may later be used in the background to do things like generating question.description or conversation.title...
 export async function generateResponse(prompt: string): Promise<string | false> {
   try {
     const response = await fetch(`https://api-inference.huggingface.co/models/${defaultModel}/v1/chat/completions`, {
