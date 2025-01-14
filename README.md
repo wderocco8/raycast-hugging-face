@@ -69,3 +69,4 @@ This extension is licensed under the [MIT License](LICENSE).
 ## Author
 
 Developed by **William De Rocco**. For questions or issues, feel free to open a GitHub issue or contact me directly.
+
