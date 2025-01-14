@@ -9,7 +9,7 @@
  * - Data validation
  */
 
-import { ActionPanel, Form, Action, showToast, Toast } from "@raycast/api";
+import { ActionPanel, Form, Action, showToast, Toast, Icon } from "@raycast/api";
 import fs from "fs";
 import { exportToFile } from "./utils/storage";
 
@@ -20,6 +20,7 @@ export default function ExportData() {
         <ActionPanel>
           <Action.SubmitForm
             title="Export"
+            icon={Icon.Upload}
             onSubmit={async (values: { folders: string[] }) => {
               const folder = values.folders[0];
               try {

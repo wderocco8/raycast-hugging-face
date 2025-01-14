@@ -1,10 +1,10 @@
 /**
  * "Import Data" Command
  *
- * Enables users to import all of their questions, conversations, 
+ * Enables users to import all of their questions, conversations,
  * and models from a specified JSON file.
- * 
- * Importing data will OVERWRITE all existing data, which is why we have 
+ *
+ * Importing data will OVERWRITE all existing data, which is why we have
  * confirmAlert to ensure the user wants to perform this action
  *
  * Key Features:
@@ -12,7 +12,7 @@
  * - Validation vis confirmAlert
  */
 
-import { Action, ActionPanel, Alert, confirmAlert, Form, showToast, Toast } from "@raycast/api";
+import { Action, ActionPanel, Alert, confirmAlert, Form, Icon, showToast, Toast } from "@raycast/api";
 import fs from "fs";
 import path from "path";
 import { importFromFile } from "./utils/storage";
@@ -67,7 +67,7 @@ export default function ImportData() {
     <Form
       actions={
         <ActionPanel>
-          <Action.SubmitForm title="Submit Name" onSubmit={handleConfirmImport} />
+          <Action.SubmitForm title="Import" icon={Icon.Download} onSubmit={handleConfirmImport} />
         </ActionPanel>
       }
     >
