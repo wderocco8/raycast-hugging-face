@@ -237,10 +237,15 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       <ActionPanel>
         <ActionPanel.Section>
           {isValidQuestionPrompt(searchQuestion.prompt) && (
-            <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
+            <Action
+              title="Ask Question"
+              icon={Icon.QuestionMark}
+              onAction={() => handleAskQuestion({ ...searchQuestion })}
+            />
           )}
           <Action
             title="Rich Text Question"
+            icon={Icon.TextInput}
             shortcut={{ modifiers: ["cmd"], key: "t" }}
             onAction={() =>
               push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
@@ -248,6 +253,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
           />
           <Action
             title="New Conversation"
+            icon={Icon.PlusCircle}
             shortcut={Keyboard.Shortcut.Common.New}
             onAction={() =>
               push(<AskQuestion />, async () => {
@@ -256,7 +262,8 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             }
           />
           <Action
-            title="Toggle Metadata"
+            title={isShowingMetaData ? "Hide Metadata" : "Show Metadata"}
+            icon={isShowingMetaData ? Icon.EyeDisabled : Icon.Eye}
             shortcut={{ modifiers: ["cmd"], key: "m" }}
             onAction={() => setIsShowingMetadata((prev) => !prev)}
           />
@@ -269,10 +276,15 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       <ActionPanel>
         <ActionPanel.Section>
           {isValidQuestionPrompt(searchQuestion.prompt) && (
-            <Action title="Ask Question" onAction={() => handleAskQuestion({ ...searchQuestion })} />
+            <Action
+              title="Ask Question"
+              icon={Icon.QuestionMark}
+              onAction={() => handleAskQuestion({ ...searchQuestion })}
+            />
           )}
           <Action
             title="Rich Text Question"
+            icon={Icon.TextInput}
             shortcut={{ modifiers: ["cmd"], key: "t" }}
             onAction={() =>
               push(<AskQuestionForm initialQuestion={searchQuestion} onQuestionSubmit={handleAskQuestion} />)
@@ -280,6 +292,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
           />
           <Action
             title="New Conversation"
+            icon={Icon.PlusCircle}
             shortcut={Keyboard.Shortcut.Common.New}
             onAction={() =>
               push(<AskQuestion />, async () => {
@@ -288,7 +301,8 @@ export default function AskQuestion({ conversationId }: ChatProps) {
             }
           />
           <Action
-            title="Toggle Metadata"
+            title={isShowingMetaData ? "Hide Metadata" : "Show Metadata"}
+            icon={isShowingMetaData ? Icon.EyeDisabled : Icon.Eye}
             shortcut={{ modifiers: ["cmd"], key: "m" }}
             onAction={() => setIsShowingMetadata((prev) => !prev)}
           />
@@ -300,6 +314,7 @@ export default function AskQuestion({ conversationId }: ChatProps) {
         <ActionPanel.Section>
           <Action
             title="Delete Question"
+            icon={Icon.Trash}
             style={Action.Style.Destructive}
             shortcut={Keyboard.Shortcut.Common.Remove}
             onAction={() => handleConfirmDelete(question)}
@@ -310,11 +325,13 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       <ActionPanel>
         <Action
           title="Stop Response"
+          icon={Icon.Stop}
           shortcut={{ modifiers: ["cmd"], key: "." }}
           onAction={handleStopResponse}
         />
         <Action
-          title="Toggle Metadata"
+          title={isShowingMetaData ? "Hide Metadata" : "Show Metadata"}
+          icon={isShowingMetaData ? Icon.EyeDisabled : Icon.Eye}
           shortcut={{ modifiers: ["cmd"], key: "m" }}
           onAction={() => setIsShowingMetadata((prev) => !prev)}
         />
