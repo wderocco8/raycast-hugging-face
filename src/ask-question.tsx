@@ -1,8 +1,14 @@
 /**
- * chat Command
+ * "Ask Question" Command
  *
- * This file defines a...
+ * Enables users to ask AI-generated questions and manage conversations
+ * within a Raycast extension.
  *
+ * Key Features:
+ * - CRUD
+ * - Stream AI responses to user questions.
+ * - Manage conversations and question history.
+ * - Select AI models for tailored responses.
  */
 
 import { useState } from "react";
@@ -302,7 +308,11 @@ export default function AskQuestion({ conversationId }: ChatProps) {
       </ActionPanel>
     ) : (
       <ActionPanel>
-        <Action title="Stop Response" shortcut={{ modifiers: ["cmd"], key: "." }} onAction={handleStopResponse} />
+        <Action
+          title="Stop Response"
+          shortcut={{ modifiers: ["cmd"], key: "." }}
+          onAction={handleStopResponse}
+        />
         <Action
           title="Toggle Metadata"
           shortcut={{ modifiers: ["cmd"], key: "m" }}

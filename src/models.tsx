@@ -1,8 +1,11 @@
 /**
- * models Command
+ * "Models" Command
  *
- * This file defines a...
+ * Enables users to create and manage custom models to use when asking questions.
+ * Users can select from a variety of Hugging Face "warm" models.
  *
+ * Key Features:
+ * - CRUD
  */
 
 import { Action, ActionPanel, Alert, Color, confirmAlert, Keyboard, List, useNavigation } from "@raycast/api";
@@ -73,7 +76,7 @@ export default function Models() {
         }
       />
       <Action
-        title="Delete Conversation"
+        title="Delete Model"
         style={Action.Style.Destructive}
         shortcut={Keyboard.Shortcut.Common.Remove}
         onAction={() => handleConfirmDelete(model)}

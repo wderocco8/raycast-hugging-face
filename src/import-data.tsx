@@ -1,8 +1,15 @@
 /**
- * import-data Command
+ * "Import Data" Command
  *
- * This file defines a...
+ * Enables users to import all of their questions, conversations, 
+ * and models from a specified JSON file.
+ * 
+ * Importing data will OVERWRITE all existing data, which is why we have 
+ * confirmAlert to ensure the user wants to perform this action
  *
+ * Key Features:
+ * - Import data from JSON file
+ * - Validation vis confirmAlert
  */
 
 import { Action, ActionPanel, Alert, confirmAlert, Form, showToast, Toast } from "@raycast/api";

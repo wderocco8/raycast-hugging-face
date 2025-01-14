@@ -1,3 +1,14 @@
+/**
+ * "Conversations" Command
+ *
+ * Enables users to view and manage their conversations
+ * with various questions and models.
+ *
+ * Key Features:
+ * - CRUD
+ * - List questions in conversation and pop to `AskQuestion` component
+ */
+
 import { Action, ActionPanel, Alert, confirmAlert, Keyboard, List, useNavigation } from "@raycast/api";
 import { useConversations } from "./hooks/useConversations";
 import { formatFullTime, formatRelativeTime } from "./utils/date/time";
